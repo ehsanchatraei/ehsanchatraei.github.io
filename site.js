@@ -32,7 +32,8 @@ count.hidden = false;
 
 const pdfViewer = document.querySelector('#pdf-viewer');
 if (pdfViewer && typeof pdfViewer.showModal === 'function') {
-  const frame = pdfViewer.querySelector('iframe');
+  const pages = pdfViewer.querySelector('.pdf-preview-pages');
+  const image = pages.querySelector('img');
   const title = pdfViewer.querySelector('h2');
   const openPdf = pdfViewer.querySelector('.pdf-open');
   const downloadPdf = pdfViewer.querySelector('.pdf-download');
@@ -46,14 +47,15 @@ if (pdfViewer && typeof pdfViewer.showModal === 'function') {
       title.textContent = link.dataset.pdfTitle;
       openPdf.href = link.href;
       downloadPdf.href = link.href;
-      frame.src = link.href;
-      frame.title = link.dataset.pdfTitle;
+      image.alt = link.dataset.pdfTitle + ' document preview';
+      image.src = link.href.replace(/\.pdf$/, '-preview.jpg');
       pdfViewer.showModal();
+      pages.scrollTop = 0;
     });
   });
 
   pdfViewer.addEventListener('close', () => {
-    frame.removeAttribute('src');
+    image.removeAttribute('src');
     activeLink?.focus();
   });
 }

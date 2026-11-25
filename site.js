@@ -28,3 +28,32 @@ filterPapers();
 controls.hidden = false;
 count.hidden = false;
 
+
+
+const pdfViewer = document.querySelector('#pdf-viewer');
+if (pdfViewer && typeof pdfViewer.showModal === 'function') {
+  const frame = pdfViewer.querySelector('iframe');
+  const title = pdfViewer.querySelector('h2');
+  const openPdf = pdfViewer.querySelector('.pdf-open');
+  const downloadPdf = pdfViewer.querySelector('.pdf-download');
+  let activeLink;
+
+  document.querySelectorAll('.pdf-link').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      activeLink = link;
+      title.textContent = link.dataset.pdfTitle;
+      openPdf.href = link.href;
+      downloadPdf.href = link.href;
+      frame.src = link.href;
+      frame.title = link.dataset.pdfTitle;
+      pdfViewer.showModal();
+    });
+  });
+
+  pdfViewer.addEventListener('close', () => {
+    frame.removeAttribute('src');
+    activeLink?.focus();
+  });
+}

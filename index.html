@@ -12,6 +12,9 @@
   <meta property="og:url" content="https://ehsanchatraei.github.io/">
   <meta property="og:image" content="https://ehsanchatraei.github.io/portrait-campus.jpg">
   <link rel="icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap">
   <link rel="stylesheet" href="styles.css?v=7">
   <link rel="stylesheet" href="research-site.css?v=20">
   <script src="site.js?v=21" defer></script>
@@ -24,16 +27,21 @@
     .soil-field-views img { aspect-ratio: 5 / 4; height: auto; object-fit: cover; }
     .soil-field-views figcaption { margin-top: .4rem; }
     #home .cover { position: relative; isolation: isolate; overflow: hidden; }
-    #home .cover-grid { display: flex; align-items: center; min-height: clamp(29rem, 49vw, 41rem); }
-    #home .cover-copy { position: relative; width: min(62%, 43rem); }
-    #home .cover-title { font-family: system-ui, "Segoe UI", sans-serif; font-size: clamp(2.35rem, 4.65vw, 4.2rem); font-weight: 650; letter-spacing: -.048em; line-height: 1.05; text-wrap: balance; }
-    #home .cover-title span { color: var(--accent); }
+    #home .cover-grid { display: flex; align-items: center; min-height: clamp(29rem, 49vw, 41rem); padding-block: clamp(3rem, 5vw, 5.6rem); }
+    #home .cover-copy { position: relative; width: min(65%, 44rem); }
+    #home .cover-title { margin-block: .85rem 1.15rem; font-family: Manrope, "Segoe UI", sans-serif; font-size: clamp(2.3rem, 4.25vw, 4.1rem); font-weight: 600; letter-spacing: -.047em; line-height: 1.05; text-wrap: balance; }
+    #home .cover-title span { display: block; color: var(--accent); }
+    #home .cover-deck { max-width: 64ch; font-size: clamp(1rem, 1.24vw, 1.13rem); line-height: 1.62; text-wrap: pretty; }
     .cover-background { position: absolute; z-index: -1; inset: 0 0 0 auto; width: min(54%, 59rem); overflow: hidden; margin: 0; }
     .cover-background img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
     .cover-background::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--forest), rgb(16 44 36 / .89) 15%, rgb(16 44 36 / .24) 44%, transparent 69%); }
     .cover-education { margin-top: .9rem; color: #e4ead9; font-size: .94rem; }
-    .cover-documents { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.2rem; }
-    .cover-documents button { display: inline-flex; align-items: center; gap: .55rem; padding: .53rem .75rem; border: 1px solid #89a498; border-radius: 3px; background: rgb(16 44 36 / .7); color: var(--cream); font: inherit; font-size: .84rem; cursor: pointer; }
+    .cover-profile-links { display: flex; flex-wrap: wrap; gap: .15rem 1.1rem; margin-top: 1.1rem; }
+    .cover-profile-links a { display: inline-flex; align-items: center; gap: .28rem; min-height: 2rem; color: var(--accent); font-size: .78rem; letter-spacing: .065em; font-weight: 650; text-transform: uppercase; }
+    .cover-profile-links a:hover { color: var(--cream); text-decoration: underline; text-underline-offset: .3em; }
+    .cover-profile-links span { font-size: .9em; }
+    .cover-documents { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .75rem; }
+    .cover-documents button { display: inline-flex; align-items: center; gap: .55rem; min-height: 2.7rem; padding: .53rem .85rem; border: 1px solid #89a498; border-radius: 4px; background: rgb(16 44 36 / .7); color: var(--cream); font: inherit; font-size: .84rem; text-decoration: none; cursor: pointer; }
     .cover-documents button:hover { border-color: var(--accent); color: var(--accent); }
     .cover-documents svg { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
     .disease-figures { margin-top: 1.4rem; }
@@ -52,6 +60,7 @@
     @media (max-width: 760px) {
       #home .cover-grid { display: block; padding-top: clamp(13rem, 55vw, 23rem); }
       #home .cover-copy { width: 100%; }
+      #home .cover-title { font-size: clamp(2.1rem, 7vw, 3.4rem); }
       .cover-background { inset: 0 0 auto; width: 100%; height: clamp(17rem, 71vw, 29rem); }
       .cover-background img { object-position: center 26%; }
       .cover-background::after { background: linear-gradient(0deg, var(--forest) 5%, rgb(16 44 36 / .65) 25%, transparent 66%); }
@@ -75,8 +84,14 @@
     <div class="cover-copy">
       <p class="context" id="about">Ehsan Chatraei, PhD <span>·</span> University of Manitoba</p>
       <h1 class="cover-title">Remote sensing of soils and crops <span>for more sustainable food production</span></h1>
-      <p class="cover-deck">A soil scientist and digital agronomy researcher in Winnipeg. My work connects drone and satellite observations with field measurements to understand crop nitrogen, yield, and agricultural soils.</p>
+      <p class="cover-deck">Precision agriculture research on soil health, plant nutrition, and early disease detection spans leaf, canopy, and field scales, combining multispectral, hyperspectral, and LiDAR data from satellite and drone surveys with field spectroradiometer measurements to pinpoint where to scout, where to sample, and which parts of a field may need a different fertilizer rate, with the broader aim of strengthening food security and reducing the environmental impact of farming.</p>
       <p class="cover-education">PhD in Soil Science (Digital Agronomy), University of Manitoba · 2022–2026</p>
+      <nav class="cover-profile-links" aria-label="Professional profiles">
+        <a href="https://www.linkedin.com/in/ehsanchatraei/">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://orcid.org/0009-0009-6779-9754">ORCID <span aria-hidden="true">↗</span></a>
+        <a href="https://www.researchgate.net/profile/Ehsan-Chatraei">ResearchGate <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/ehsanchatraei">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
       <div class="cover-documents" aria-label="Profile documents">
         <button type="button" class="document-preview-link" id="curriculum-vitae" aria-haspopup="dialog" data-preview-src="curriculum-vitae-preview.png" data-preview-title="Curriculum vitae" data-preview-mode="cv">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 11h6m-6 4h6m-6 3h4"/></svg>

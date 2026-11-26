@@ -122,3 +122,21 @@ figcaption{color:var(--muted);font-size:.82rem;line-height:1.45;margin-top:.42re
 @media(max-width:600px){.shell{width:calc(100% - 2rem)}.rule-section,.cv-row{grid-template-columns:1fr}.profile-intro{grid-template-columns:1fr;padding-block:1.55rem 1.65rem}.profile-intro figure{width:min(64%,220px)}.records>div{grid-template-columns:80px minmax(0,1fr)}.records.plain>div{grid-template-columns:1fr}.paper-figures{grid-template-columns:1fr}.section-label h2{font-size:1.52rem}}
 @media print{.site-header,.site-footer,footer,.skip,.cv-actions,.pdf-viewer{display:none!important}.shell{width:100%}.cv{padding:0}.cv-row{grid-template-columns:130px minmax(0,1fr);break-inside:avoid}}
 
+
+/* Restore the forest palette around the academic layout. */
+:root{--paper:#f6f5ed;--ink:#1b2d24;--muted:#465b50;--line:#ccd6cc;--link:#245b47;--soft:#e9eee2;--forest:#102b22;--cream:#f4f5eb;--accent:#e0eca7}
+.site-header{background:var(--forest);border-color:#3b584b}
+.site-header .brand,.site-header nav a{color:var(--cream)}
+.site-header nav a:hover{color:var(--accent)}
+.masthead nav:only-child{margin-left:auto}
+.profile-intro{background:var(--forest);color:var(--cream);box-shadow:0 0 0 100vmax var(--forest);clip-path:inset(0 -100vmax)}
+.profile-intro h1{color:var(--cream)}
+.profile-intro .affiliation{color:#cbdccc}
+.profile-intro .inline-links a{color:var(--accent)}
+.profile-intro img{border:1px solid #719181}
+.section-label h2{color:#244c3b}
+.paper-diagram,.issuer-badge{background:var(--soft)}
+.activity-photo.full-photo img{aspect-ratio:auto;height:auto;object-fit:contain}
+@media(max-width:820px){.masthead nav:only-child{margin-left:0}}
+@media print{.profile-intro{background:white;color:black;box-shadow:none;clip-path:none}.profile-intro h1,.profile-intro .affiliation,.profile-intro .inline-links a{color:black}}
+

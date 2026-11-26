@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+  (() => {
+    const hash = location.hash.slice(1);
+    const target = (!hash || hash === 'main' || hash === 'top') ? 'credentials' : hash;
+    location.replace('./' + location.search + '#' + target);
+  })();
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV and Credentials | Ehsan Chatraei</title>
   <meta name="description" content="Ehsan Chatraei’s academic CV, research portfolio and professional certificates.">
   <meta name="theme-color" content="#102b22">
-  <link rel="canonical" href="https://ehsanchatraei.github.io/resources.html">
+  <link rel="canonical" href="https://ehsanchatraei.github.io/#credentials">
   <meta property="og:title" content="CV and Credentials | Ehsan Chatraei">
   <meta property="og:description" content="Ehsan Chatraei’s academic CV, research portfolio and professional certificates.">
   <meta property="og:url" content="https://ehsanchatraei.github.io/resources.html">

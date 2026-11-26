@@ -12,9 +12,6 @@
   <meta property="og:url" content="https://ehsanchatraei.github.io/">
   <meta property="og:image" content="https://ehsanchatraei.github.io/portrait-campus.jpg">
   <link rel="icon" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;650;700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="styles.css?v=7">
   <link rel="stylesheet" href="research-site.css?v=20">
   <script src="site.js?v=21" defer></script>
@@ -26,16 +23,14 @@
     .soil-evidence { margin-block: 1.35rem; }
     .soil-field-views img { aspect-ratio: 5 / 4; height: auto; object-fit: cover; }
     .soil-field-views figcaption { margin-top: .4rem; }
-    #home .cover { position: relative; isolation: isolate; overflow: hidden; background: var(--forest); }
-    #home .cover-grid { display: block; padding-block: clamp(3rem, 5vw, 5.25rem); }
-    #home .cover-copy { position: relative; width: min(76%, 56rem); font-family: "Source Sans 3", "Segoe UI", sans-serif; }
-    #home .cover-copy .context { font-size: .88rem; }
-    #home .cover-title { margin-block: .85rem 1.25rem; font-family: "DM Sans", "Segoe UI", sans-serif; font-size: clamp(2.65rem, 4.15vw, 4.55rem); font-weight: 600; letter-spacing: -.05em; line-height: 1.04; }
-    #home .cover-title span { display: block; color: var(--accent); text-wrap: balance; }
-    #home .cover-deck { max-width: 76ch; color: #eaf0e4; font-size: clamp(1.2rem, 1.55vw, 1.38rem); line-height: 1.56; text-wrap: pretty; }
-    .cover-figure { position: absolute; z-index: -1; inset: 50% 0 auto auto; width: min(36%, 32rem); margin: 0; transform: translateY(-50%); }
+    #home .cover { background: var(--forest); }
+    #home .cover-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); align-items: start; gap: clamp(2rem, 6vw, 6rem); padding-block: clamp(3rem, 6vw, 6.25rem); }
+    #home .cover-copy { min-width: 0; font-family: var(--sans); }
+    #home .cover-copy .context { font-size: .83rem; }
+    #home .cover-title { margin-block: .95rem 1.25rem; font-family: var(--serif); font-size: clamp(2.65rem, 5.15vw, 5.25rem); font-weight: 400; line-height: .99; letter-spacing: -.063em; text-wrap: balance; }
+    #home .cover-deck { max-width: 72ch; color: #eaf0e4; font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.62; }
+    .cover-figure { width: min(100%, 405px); margin: .65rem 0 0; justify-self: end; padding: 1px; background: #8fa678; box-shadow: 10px 10px 0 #38574b; }
     .cover-figure img { display: block; width: 100%; height: auto; }
-    .cover-figure::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--forest), rgb(16 44 36 / .79) 15%, rgb(8 24 19 / .18) 43%, rgb(8 24 19 / .03) 68%), linear-gradient(180deg, var(--forest), transparent 16%, transparent 78%, var(--forest)); }
     .cover-education { margin-top: 1.15rem; color: #e4ead9; font-size: 1.12rem; line-height: 1.45; }
     .cover-education strong { color: var(--cream); font-weight: 700; }
     .cover-profile-links { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; margin-top: 1.15rem; }
@@ -61,10 +56,9 @@
     .pdf-viewer.visual-preview.preview-zoomed .pdf-preview-pages img { width: max(94rem, 150%); max-width: none; max-height: none; margin: 0; }
     .pdf-viewer.cv-preview.preview-zoomed .pdf-preview-pages img { display: block; width: max(60rem, 135%); max-width: none; margin: 0; }
     @media (max-width: 760px) {
-      #home .cover-grid { padding-block: 2.55rem 2.8rem; }
-      #home .cover-copy { width: 100%; }
-      #home .cover-title { font-size: clamp(2.4rem, 8vw, 3.7rem); }
-      .cover-figure { position: relative; z-index: auto; inset: auto; width: min(75%, 18rem); margin: 1.4rem 0 0 auto; transform: none; }
+      #home .cover-grid { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding-block: 2.55rem 2.8rem; }
+      #home .cover-title { font-size: clamp(2.6rem, 8.5vw, 4.2rem); }
+      .cover-figure { width: min(78%, 19rem); margin-top: 0; justify-self: start; }
       .disease-figures { grid-template-columns: minmax(0, 1fr); }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -83,7 +77,7 @@
   <div class="shell cover-grid">
     <div class="cover-copy">
       <p class="context" id="about">Ehsan Chatraei, PhD <span>·</span> University of Manitoba</p>
-      <h1 class="cover-title">Remote sensing of soils and crops <span>for more sustainable food production</span></h1>
+      <h1 class="cover-title">Remote sensing of soils and crops for more sustainable food production</h1>
       <p class="cover-deck">Precision agriculture research on soil health, plant nutrition, and early disease detection spans leaf, canopy, and field scales, combining multispectral, hyperspectral, and LiDAR data from satellite and drone surveys with field spectroradiometer measurements to pinpoint where to scout, where to sample, and which parts of a field may need a different fertilizer rate, with the broader aim of strengthening food security and reducing the environmental impact of farming.</p>
       <p class="cover-education"><strong>PhD awarded in 2026</strong> · Soil Science (Digital Agronomy), University of Manitoba</p>
       <nav class="cover-profile-links" aria-label="Professional profiles and contact">

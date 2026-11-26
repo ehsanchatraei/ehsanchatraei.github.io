@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Ehsan Chatraei</title>
+  <meta name="description" content="Potato nitrogen and yield, hyperspectral spectroscopy, and digital soil mapping research by Ehsan Chatraei.">
+  <meta name="theme-color" content="#102b22">
+  <link rel="canonical" href="https://ehsanchatraei.github.io/research.html">
+  <meta property="og:title" content="Research | Ehsan Chatraei">
+  <meta property="og:description" content="Potato nitrogen and yield, hyperspectral spectroscopy, and digital soil mapping research by Ehsan Chatraei.">
+  <meta property="og:url" content="https://ehsanchatraei.github.io/research.html">
+  <meta property="og:image" content="https://ehsanchatraei.github.io/field-design.jpg">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="research-site.css?v=8">
+  
+</head>
+<body class="research-site" id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="shell masthead">
+      <a class="fieldmark" href="./">Digital Agronomy</a>
+      <nav aria-label="Main navigation"><a href="./">Home</a><a href="research.html" aria-current="page">Research</a><a href="publications.html">Publications</a><a href="fieldwork.html">Field &amp; outreach</a><a href="resources.html">CV &amp; credentials</a></nav>
+    </div></header>
+<main id="main">
+<div class="inner-heading"><div class="shell">
+      <h1>Research</h1><p>How can remote sensing help us measure what matters in a field? Three projects follow that question from a potato plant to a satellite image.</p>
+    </div></div><nav class="shell topic-nav" aria-label="On this page"><a href="#crop">Potato nitrogen and yield</a><a href="#spectroscopy">Hyperspectral spectroscopy</a><a href="#soil">Satellite soil mapping</a><a href="#data">Open data</a></nav>
+<div class="shell research-flow">
+<article class="research-feature" id="crop">
+  <div class="feature-heading"><p class="context">Carberry, Manitoba · Multispectral imagery and LiDAR</p><h2>At row closure, the canopy gives two different answers.</h2><p>In the 2023–2024 trials, a chlorophyll-sensitive index had the strongest relationship with petiole nitrate among the vegetation indices tested. A subsequent experiment used multispectral imagery and LiDAR from the 2024–2025 seasons to test what canopy colour and structure could reveal together.</p></div>
+  <div class="feature-grid"><figure class="feature-image">
+      <img src="trial-2025.jpg" alt="Drone view of potato plots and a field worker among the rows" width="960" height="640" loading="lazy">
+      <figcaption>Potato field campaign, Carberry, 2025</figcaption>
+    </figure><figure class="result-chart">
+      <h3>Predicting tuber yield at row closure</h3><p class="chart-metric">R² on the held-out test set · best model in each group</p>
+      <dl class="chart-bars"><div class="chart-row tone-blue"><dt>Yield only</dt><dd><span class="chart-track" aria-hidden="true"><span style="--bar-width:26%"></span></span><strong>0.26</strong></dd></div><div class="chart-row tone-green"><dt>Yield + petiole nitrate</dt><dd><span class="chart-track" aria-hidden="true"><span style="--bar-width:60%"></span></span><strong>0.60</strong></dd></div><div class="chart-axis" aria-hidden="true"><dt></dt><dd><span>0</span><span>0.25</span><span>0.50</span><span>0.75</span><span>1.00</span></dd></div></dl>
+      <figcaption>Joint training improved yield prediction across all tested architectures. Its effect on nitrate prediction depended on the architecture. <a href="https://doi.org/10.1016/j.compag.2026.111893">Source paper ↗</a></figcaption>
+    </figure></div><div class="figure-pair"><figure class="paper-display"><a href="fig-drone-plots.jpg"><img src="fig-drone-plots.jpg" alt="Location and layout of the Carberry potato field experiment" width="631" height="247" loading="lazy"></a>
+    <figcaption>Field site and plot layout, Fig. 2 · <a href="https://doi.org/10.3390/rs17111860">Original paper</a> · CC BY 4.0</figcaption></figure><figure class="paper-display"><a href="fig-fusion-validation.jpg"><img src="fig-fusion-validation.jpg" alt="Scatter plots comparing observed and predicted tuber yield and petiole nitrate" width="757" height="372" loading="lazy"></a>
+    <figcaption>Validation of joint models, Fig. 4 · <a href="https://doi.org/10.1016/j.compag.2026.111893">Original paper</a> · CC BY 4.0</figcaption></figure></div></article>
+<article class="research-feature" id="spectroscopy">
+  <div class="feature-heading"><p class="context">Visible to shortwave infrared spectroscopy</p><h2>The same crop looks different in the field and in the lab.</h2><p>We compared measurements taken over the canopy with measurements from fresh leaves and dried tissue. Fresh leaves gave the strongest nitrogen estimates. Aligning the canopy spectra to the fresh-leaf reference improved the field model, showing how much the measurement conditions influence the signal.</p></div>
+  <div class="feature-grid"><figure class="paper-display"><a href="fig-spectra-measurements.jpg"><img src="fig-spectra-measurements.jpg" alt="Field-canopy, fresh-leaf, and dried-tissue spectroscopy setups" width="634" height="199" loading="lazy"></a>
+    <figcaption>Field and laboratory setups, Fig. 1 · <a href="https://doi.org/10.1016/j.atech.2026.101801">Original paper</a> · CC BY-NC-ND 4.0</figcaption></figure><figure class="result-chart">
+      <h3>Estimating potato nitrogen with spectra</h3><p class="chart-metric">R² reported for the 1D-CNN model</p>
+      <dl class="chart-bars"><div class="chart-row tone-blue"><dt>Field canopy</dt><dd><span class="chart-track" aria-hidden="true"><span style="--bar-width:77%"></span></span><strong>0.77</strong></dd></div><div class="chart-row tone-teal"><dt>Field, after calibration</dt><dd><span class="chart-track" aria-hidden="true"><span style="--bar-width:82%"></span></span><strong>0.82</strong></dd></div><div class="chart-row tone-green"><dt>Fresh leaves in the lab</dt><dd><span class="chart-track" aria-hidden="true"><span style="--bar-width:90%"></span></span><strong>0.90</strong></dd></div><div class="chart-axis" aria-hidden="true"><dt></dt><dd><span>0</span><span>0.25</span><span>0.50</span><span>0.75</span><span>1.00</span></dd></div></dl>
+      <figcaption>The field comparison shows performance before and after calibration transfer. The fresh-leaf result comes from laboratory measurements. <a href="https://doi.org/10.1016/j.atech.2026.101801">Source paper ↗</a></figcaption>
+    </figure></div>
+  <aside class="open-data" id="data"><div><h3>Open potato spectroscopy data</h3><p>Explore the 2024 Carberry measurements. The archive contains canopy, fresh-leaf and dried-tissue spectra linked to plot-level petiole nitrate, with metadata and documentation for reuse.</p></div><div class="data-links"><a class="cta" href="https://doi.org/10.17632/vtw96y8k47.3">Dataset and documentation ↗</a><a class="arrow-link" href="https://doi.org/10.1016/j.dib.2026.113412">Read the data paper ↗</a></div></aside>
+</article>
+<article class="research-feature" id="soil">
+  <div class="feature-heading"><p class="context">Digital soil mapping</p><h2>Combining satellite views to map soil carbon.</h2><p>In cropland in South Moravia, Czech Republic, our team combined PlanetScope SuperDove imagery with selected Sentinel-2 bands and terrain data. The strongest model for soil organic carbon used the fused imagery with terrain and reached an R² of 0.83 in the study. <a href="https://doi.org/10.1016/j.catena.2025.108902">Read the <em>Catena</em> paper ↗</a></p></div>
+  <figure class="soil-workflow">
+    <h3>Inputs to the published soil carbon model</h3>
+    <div class="soil-inputs"><div><strong>PlanetScope SuperDove</strong><span>Fine spatial detail</span></div><span aria-hidden="true">+</span><div><strong>Sentinel-2</strong><span>Selected spectral bands</span></div><span aria-hidden="true">+</span><div><strong>Elevation model</strong><span>Terrain variables</span></div></div>
+    <div class="soil-output"><span aria-hidden="true">↓</span><strong>Soil organic carbon estimates</strong><span>Gaussian process regression with field soil measurements</span></div>
+    <figcaption>Diagram based on the methods in Biney et al. (2025). <a href="https://doi.org/10.1016/j.catena.2025.108902">Source paper ↗</a></figcaption>
+  </figure>
+  <div class="project-note"><h3>Hyperspectral soil mapping in Manitoba</h3><p>As co-PI on a Mitacs Accelerate project with Planet Labs, I helped develop a study that pairs Tanager satellite imagery with field and laboratory spectra to evaluate how well satellite imaging can characterize agricultural soils.</p></div>
+</article>
+</div>
+</main>
+<footer class="journal-footer" id="contact"><div class="shell footer-grid">
+  <div><h2>Get in touch</h2><a href="mailto:chatraee@myumanitoba.ca">chatraee@myumanitoba.ca</a></div>
+  <div><p>Digital AgroEcosystems Lab<br>University of Manitoba · Winnipeg, Canada</p><div class="footer-links"><a href="https://orcid.org/0009-0009-6779-9754">ORCID</a><a href="https://www.linkedin.com/in/ehsanchatraei/">LinkedIn</a><a href="https://github.com/ehsanchatraei">GitHub</a></div></div>
+</div></footer>
+
+</body>
+</html>

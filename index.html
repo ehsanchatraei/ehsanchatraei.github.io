@@ -87,6 +87,32 @@
       .credential-group h2 { max-width: none; }
     }
     @media (max-width: 650px) { .credential-group-list { grid-template-columns: minmax(0, 1fr); } }
+    .teaching-content { display: grid; gap: clamp(1.5rem, 3vw, 2.35rem); }
+    .teaching-guest-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr); align-items: start; gap: clamp(1rem, 3vw, 2.3rem); }
+    .teaching-content h3 { margin: 0 0 .9rem; color: var(--forest); font-size: clamp(1.4rem, 2.35vw, 1.8rem); }
+    .teaching-sessions { display: grid; gap: .85rem; margin: 0; padding: 0; list-style: none; }
+    .teaching-sessions li { padding: .8rem 1rem; border: 1px solid #b4cfc6; border-left: 3px solid #558b7b; background: #edf6f0; }
+    .teaching-session-meta { color: #315f52; font-size: .82rem; font-weight: 700; letter-spacing: .035em; }
+    .teaching-sessions h4 { margin: .24rem 0 .3rem; color: var(--ink); font-size: clamp(1rem, 1.6vw, 1.12rem); line-height: 1.3; }
+    .teaching-sessions p { margin: 0; }
+    .teaching-sessions h4 + p { color: #334f45; font-size: .92rem; }
+    .teaching-photo { margin: 0; border: 1px solid #afcbbf; background: #edf6f0; }
+    .teaching-photo img { display: block; width: 100%; height: auto; }
+    .teaching-photo figcaption { padding: .53rem .8rem; color: #31564a; font-size: .87rem; }
+    .teaching-table { width: 100%; border-collapse: collapse; background: #f0f6ee; font-size: .95rem; line-height: 1.4; }
+    .teaching-table th, .teaching-table td { padding: .65rem .8rem; border-bottom: 1px solid #bdd4c9; text-align: left; vertical-align: top; }
+    .teaching-table thead { background: #dcebe2; color: #234c3f; }
+    .teaching-table tbody th { color: #225144; font-size: .88rem; }
+    .teaching-table :is(th, td):first-child, .teaching-table :is(th, td):last-child { white-space: nowrap; }
+    .teaching-table td:last-child { color: #375b4e; font-variant-numeric: tabular-nums; }
+    .teaching-course-note { color: #375b4e; }
+    @media (max-width: 760px) { .teaching-guest-grid { grid-template-columns: minmax(0, 1fr); } }
+    @media (max-width: 520px) {
+      .teaching-table { font-size: .84rem; }
+      .teaching-table th, .teaching-table td { padding: .47rem .37rem; }
+      .teaching-table tbody th { font-size: .8rem; }
+      .teaching-table td:last-child { white-space: normal; }
+    }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print { .single-page .site-header { position: static; } }
   </style>
@@ -302,12 +328,44 @@
   </div>
 </section><section id="teaching" class="rule-section" aria-labelledby="teaching-title">
   <div class="section-label"><h2 id="teaching-title">Teaching</h2><p>University of Manitoba</p></div>
-  <div class="section-body">
-    <p>In <em>Introduction to Digital Agriculture</em>, students compared measurements from an ASD spectrometer and a Nix sensor to see how leaves and soils reflect light. I also supported labs on satellite imagery and agricultural mapping, and demonstrated how multispectral and LiDAR measurements relate to observations in the field.</p>
-    <p>I supported course and laboratory instruction in <em>Soil and Water Management</em> and helped students with soil science laboratory exercises.</p>
-    <figure class="activity-photo"><img style="aspect-ratio: auto 1050 / 690" src="field-training.jpg" alt="Group assembled outdoors near a drone landing pad and field equipment" width="1050" height="690" loading="lazy"><figcaption>Field training and drone demonstrations</figcaption></figure>
+  <div class="section-body teaching-content">
+    <div class="teaching-guest-grid">
+      <section class="teaching-guest" aria-labelledby="teaching-guest-title">
+        <h3 id="teaching-guest-title">Guest instruction</h3>
+        <ul class="teaching-sessions">
+          <li>
+            <p class="teaching-session-meta">AGRI 3100 <span aria-hidden="true">·</span> 2025 and 2026</p>
+            <h4>Introduction to Digital Agriculture</h4>
+            <p>Guest sessions on drone flight operations and the use of multispectral imagery and LiDAR to assess crops.</p>
+          </li>
+          <li>
+            <p class="teaching-session-meta">SOIL 3610 <span aria-hidden="true">·</span> 2026</p>
+            <h4>Field Methods in Land Resource Science</h4>
+            <p>Guest session on drone flight demonstrations and how aerial imagery and LiDAR complement field observations.</p>
+          </li>
+        </ul>
+      </section>
+      <figure class="teaching-photo">
+        <img src="field-training.jpg" alt="AGRI 3100 students and instructors beside a drone landing pad during field instruction" width="1050" height="690" loading="lazy" decoding="async">
+        <figcaption>Drone flight demonstration, AGRI 3100 · 2025</figcaption>
+      </figure>
+    </div>
+    <section class="teaching-appointments" aria-labelledby="teaching-ta-title">
+      <h3 id="teaching-ta-title">Teaching assistant appointments</h3>
+      <table class="teaching-table" aria-labelledby="teaching-ta-title">
+        <thead><tr><th scope="col">Course code</th><th scope="col">Course</th><th scope="col">Years</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">PLNT 0410</th><td>Crop Production Principles and Practices</td><td>2025–present</td></tr>
+          <tr><th scope="row">SOIL 4510</th><td>Soil and Water Management</td><td>2024–2025</td></tr>
+          <tr><th scope="row">SOIL 0630</th><td>Soil Fertility</td><td>2023</td></tr>
+          <tr><th scope="row">SOIL 0420</th><td>Soil Resources and Productivity <span class="teaching-course-note">(soil classification and identification)</span></td><td>2023</td></tr>
+          <tr><th scope="row">SOIL 0620</th><td>Soil and Water Management</td><td>2023</td></tr>
+        </tbody>
+      </table>
+    </section>
   </div>
-</section><section id="leadership" class="rule-section" aria-labelledby="leadership-title">
+</section>
+<section id="leadership" class="rule-section" aria-labelledby="leadership-title">
   <div class="section-label"><h2 id="leadership-title">Leadership &amp; service</h2></div>
   <div class="section-body">
     <dl class="records plain">

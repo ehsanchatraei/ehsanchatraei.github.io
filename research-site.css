@@ -239,8 +239,22 @@
   height: 100%;
   object-fit: contain;
 }
+.document-preview-link {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--link);
+  font: inherit;
+  text-align: start;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  cursor: pointer;
+}
+.document-preview-link:hover { color: var(--forest); }
 .resources-body .document-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-bottom: 2.1rem; }
-.resources-body .document-links a { background: #cde4d9; padding: .9rem; font-weight: 650; }
+.resources-body .document-links :is(a, button) { background: #cde4d9; padding: .9rem; font-weight: 650; }
+.credential-list .document-preview-link { font-size: .85rem; padding: .24rem .3rem; }
 .resources-body .credential-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .72rem; }
 .resources-body .credential-list li { padding: .85rem; min-width: 0; background: #d9e6d4; border: 1px solid #c7d6c4; }
 .credential-heading { font-size: 1.7rem; }

@@ -37,20 +37,14 @@ if (pdfViewer && typeof pdfViewer.showModal === 'function') {
   const pages = pdfViewer.querySelector('.pdf-preview-pages');
   const image = pages.querySelector('img');
   const title = pdfViewer.querySelector('h2');
-  const openPdf = pdfViewer.querySelector('.pdf-open');
-  const downloadPdf = pdfViewer.querySelector('.pdf-download');
-  let activeLink;
+  let activeButton;
 
-  document.querySelectorAll('.pdf-link').forEach(link => {
-    link.addEventListener('click', event => {
-      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      activeLink = link;
-      title.textContent = link.dataset.pdfTitle;
-      if (openPdf) openPdf.href = link.href;
-      if (downloadPdf) downloadPdf.href = link.href;
-      image.alt = link.dataset.pdfTitle + ' document preview';
-      image.src = link.href.replace(/\.pdf$/, '-preview.jpg');
+  document.querySelectorAll('.document-preview-link').forEach(button => {
+    button.addEventListener('click', () => {
+      activeButton = button;
+      title.textContent = button.dataset.previewTitle;
+      image.alt = button.dataset.previewTitle + ' document preview';
+      image.src = button.dataset.previewSrc;
       pdfViewer.showModal();
       pages.scrollTop = 0;
     });
@@ -58,6 +52,6 @@ if (pdfViewer && typeof pdfViewer.showModal === 'function') {
 
   pdfViewer.addEventListener('close', () => {
     image.removeAttribute('src');
-    activeLink?.focus();
+    activeButton?.focus();
   });
 }

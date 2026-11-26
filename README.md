@@ -1,6 +1,6 @@
 # Ehsan Chatraei Azizabadi · Academic website
 
-The homepage links to research projects, a searchable publication archive, fieldwork and outreach, and professional documents. The public academic CV lives at `cv.html` and supports browser printing.
+The homepage links to research projects, a searchable publication archive, fieldwork and outreach, and professional documents. The public academic CV lives at `cv.html`.
 
 ## Preview
 
@@ -16,7 +16,7 @@ For the personal site at `https://ehsanchatraei.github.io/`, place the files in 
 - `research.html` contains the project stories, paper figures, and DOI-linked charts.
 - `publications.html` contains the publication archive. Set each entry's `data-year` and update the year selector if needed.
 - `fieldwork.html` contains the field photos, teaching, outreach and conferences.
-- `resources.html` contains certificate and CV links. A PDF named `example.pdf` uses `example-preview.jpg` for in-page preview.
+- `resources.html` contains the CV link and credential previews. A preview button points to an image through its `data-preview-src` attribute.
 
 The shared styles are in `styles.css` and `research-site.css`. The archive remains available when JavaScript is disabled.
 

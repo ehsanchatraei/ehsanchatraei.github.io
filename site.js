@@ -37,21 +37,43 @@ if (pdfViewer && typeof pdfViewer.showModal === 'function') {
   const pages = pdfViewer.querySelector('.pdf-preview-pages');
   const image = pages.querySelector('img');
   const title = pdfViewer.querySelector('h2');
+  const zoom = pdfViewer.querySelector('.preview-zoom');
   let activeButton;
 
-  document.querySelectorAll('.document-preview-link').forEach(button => {
+  function updateZoom(expanded) {
+    pdfViewer.classList.toggle('preview-zoomed', expanded);
+    zoom.setAttribute('aria-pressed', String(expanded));
+    zoom.textContent = expanded ? 'Fit to window' : 'Zoom in';
+    if (!expanded) pages.scrollLeft = 0;
+  }
+
+  const buttons = document.querySelectorAll('.document-preview-link');
+  buttons.forEach(button => {
     button.addEventListener('click', () => {
       activeButton = button;
       title.textContent = button.dataset.previewTitle;
       image.alt = button.dataset.previewTitle + ' document preview';
       image.src = button.dataset.previewSrc;
+      const mode = button.dataset.previewMode;
+      pdfViewer.classList.toggle('poster-viewer', Boolean(button.closest('#field-outreach')));
+      pdfViewer.classList.toggle('visual-preview', mode === 'visual');
+      pdfViewer.classList.toggle('cv-preview', mode === 'cv');
+      if (zoom) {
+        zoom.hidden = mode !== 'visual' && mode !== 'cv';
+        updateZoom(false);
+      }
       pdfViewer.showModal();
       pages.scrollTop = 0;
     });
   });
 
+  zoom?.addEventListener('click', () => updateZoom(zoom.getAttribute('aria-pressed') !== 'true'));
+
   pdfViewer.addEventListener('close', () => {
     image.removeAttribute('src');
     activeButton?.focus();
   });
+
+  const previewLinks = { '#academic-cv': 'curriculum-vitae', '#curriculum-vitae': 'curriculum-vitae', '#academic-timeline': 'academic-timeline' };
+  document.getElementById(previewLinks[location.hash])?.click();
 }

@@ -13,8 +13,8 @@
   <meta property="og:image" content="https://ehsanchatraei.github.io/field-outreach-full.jpg">
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="styles.css?v=7">
-  <link rel="stylesheet" href="research-site.css?v=16">
-  
+  <link rel="stylesheet" href="research-site.css?v=18">
+  <script src="site.js?v=8" defer></script>
 </head>
 <body class="research-site" id="top">
 <a class="skip" href="#main">Skip to content</a>
@@ -82,35 +82,20 @@
 </section><section id="conferences" class="rule-section" aria-labelledby="conferences-title">
   <div class="section-label"><h2 id="conferences-title">Conferences</h2></div>
   <div class="section-body">
-    <dl class="records conference-list">
+    <dl class="records conference-list" id="conference-posters">
       <div>
         <dt>2026</dt>
         <dd><ul>
-          <li><strong>ISPRS Congress</strong>, Toronto · Oral presentation and <a href="#isprs-poster">poster</a></li>
+          <li><strong>ISPRS Congress</strong>, Toronto · Oral presentation and <a id="isprs-poster" class="pdf-link" href="isprs-2026-poster.pdf" data-pdf-title="In-Season Potato Nitrogen Prediction from Multispectral UAV Imagery" aria-label="ISPRS Congress poster" aria-haspopup="dialog">poster</a></li>
           <li><strong>IEEE M2GARSS</strong>, Marrakech, Morocco · Oral presentation</li>
           <li><strong>EGU General Assembly</strong>, Vienna, Austria · Oral presentation</li>
           <li><strong>Manitoba Digital Agriculture Symposium</strong>, University of Manitoba · Poster presentation</li>
         </ul></dd>
       </div>
-      <div><dt>2025</dt><dd><ul><li><strong>Canadian Society of Soil Science</strong> · Oral presentation and <a href="#csss-poster">poster</a></li></ul></dd></div>
+      <div><dt>2025</dt><dd><ul><li><strong>Canadian Society of Soil Science</strong> · Oral presentation and <a id="csss-poster" class="pdf-link" href="csss-2025-poster.pdf" data-pdf-title="Advancing Nutrient Deficiency Detection in Potato Using Visible-Near Infrared Spectroscopy" aria-label="Canadian Society of Soil Science poster" aria-haspopup="dialog">poster</a></li></ul></dd></div>
       <div><dt>2024</dt><dd><ul><li><strong>ASPRS Symposium</strong> · Oral presentation</li><li><strong>Manitoba Society of Soil Science</strong> · Poster, third place</li></ul></dd></div>
       <div><dt>2023</dt><dd><ul><li><strong>Canadian Society of Soil Science</strong></li><li><strong>University of Manitoba GIS Days</strong> · Panel, November 15</li></ul></dd></div>
     </dl>
-    <section class="conference-posters" id="conference-posters" aria-labelledby="conference-posters-title">
-      <h3 id="conference-posters-title">Conference posters</h3>
-      <div class="figure-pair">
-        <article class="conference-poster" id="isprs-poster">
-          <p class="context">ISPRS Congress · Toronto · 2026</p>
-          <h4><a href="isprs-2026-poster.pdf">In-Season Potato Nitrogen Prediction from Multispectral UAV Imagery <span class="poster-format">PDF</span></a></h4>
-          <img src="isprs-2026-poster-preview.jpg" alt="ISPRS poster preview showing potato trial maps and nitrogen prediction results" width="1110" height="1440" loading="lazy">
-        </article>
-        <article class="conference-poster" id="csss-poster">
-          <p class="context">Canadian Society of Soil Science · 2025</p>
-          <h4><a href="csss-2025-poster.pdf">Advancing Nutrient Deficiency Detection in Potato Using Visible-Near Infrared Spectroscopy <span class="poster-format">PDF</span></a></h4>
-          <img src="csss-2025-poster-preview.jpg" alt="CSSS poster preview showing field and laboratory reflectance spectra and model comparisons" width="1080" height="1440" loading="lazy">
-        </article>
-      </div>
-    </section>
     <div class="field-strip">
       <figure><img src="presentation.jpg" alt="Ehsan speaking at a podium beside a research slide" width="653" height="469" loading="lazy"><figcaption>Hyperspectral research presentation</figcaption></figure>
       <figure><img src="research-poster.jpg" alt="Ehsan presenting a poster on crop sensing" width="800" height="800" loading="lazy"><figcaption>Digital agriculture poster presentation</figcaption></figure>
@@ -135,6 +120,16 @@
   <div><h2>Get in touch</h2><a href="mailto:chatraee@myumanitoba.ca">chatraee@myumanitoba.ca</a></div>
   <div><p>Digital AgroEcosystems Lab<br>University of Manitoba · Winnipeg, Canada</p><div class="footer-links"><a href="https://orcid.org/0009-0009-6779-9754">ORCID</a><a href="https://www.linkedin.com/in/ehsanchatraei/">LinkedIn</a><a href="https://github.com/ehsanchatraei">GitHub</a></div></div>
 </div></footer>
-
+<dialog class="pdf-viewer" id="pdf-viewer" aria-labelledby="pdf-viewer-title">
+  <div class="pdf-viewer-header">
+    <h2 id="pdf-viewer-title">Poster preview</h2>
+    <form method="dialog"><button type="submit" class="button outline" autofocus>Close</button></form>
+  </div>
+  <div class="pdf-viewer-actions">
+    <a class="text-link pdf-open" href="./">Open full PDF</a>
+    <a class="text-link pdf-download" href="./" download>Download PDF</a>
+  </div>
+  <div class="pdf-preview-pages" tabindex="0" aria-label="Poster preview"><img alt=""></div>
+</dialog>
 </body>
 </html>

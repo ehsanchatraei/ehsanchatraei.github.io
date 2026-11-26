@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+  (() => {
+    const hash = location.hash.slice(1);
+    const target = (!hash || hash === 'main' || hash === 'top') ? 'field-outreach' : hash;
+    location.replace('./' + location.search + '#' + target);
+  })();
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fieldwork and Outreach | Ehsan Chatraei</title>
   <meta name="description" content="Field trials, grower outreach, teaching, invited activities and conference presentations from Ehsan Chatraei.">
   <meta name="theme-color" content="#102b22">
-  <link rel="canonical" href="https://ehsanchatraei.github.io/fieldwork.html">
+  <link rel="canonical" href="https://ehsanchatraei.github.io/#field-outreach">
   <meta property="og:title" content="Fieldwork and Outreach | Ehsan Chatraei">
   <meta property="og:description" content="Field trials, grower outreach, teaching, invited activities and conference presentations from Ehsan Chatraei.">
   <meta property="og:url" content="https://ehsanchatraei.github.io/fieldwork.html">

@@ -26,8 +26,8 @@
     #home .cover { background: var(--forest); }
     #home .cover-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); align-items: center; min-height: 0; gap: clamp(2rem, 5.5vw, 5.5rem); padding-block: clamp(2.5rem, 4vw, 4rem); }
     #home .cover-copy { min-width: 0; font-family: var(--sans); }
-    #home .cover-copy .context { font-size: .83rem; }
-    #home .cover-title { margin-block: .72rem 1.1rem; font-family: var(--serif); font-size: clamp(2.5rem, 4.2vw, 4.4rem); font-weight: 400; line-height: .99; letter-spacing: -.063em; text-wrap: balance; }
+    .cover-name { color: var(--accent); font-size: clamp(1.3rem, 1.6vw, 1.65rem); font-weight: 650; line-height: 1.25; letter-spacing: .01em; }
+    #home .cover-title { margin-block: 1.05rem 1.1rem; font-family: var(--serif); font-size: clamp(2.5rem, 4.2vw, 4.4rem); font-weight: 400; line-height: .99; letter-spacing: -.063em; text-wrap: balance; }
     #home .cover-deck { max-width: 72ch; color: #eaf0e4; font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.62; }
     .cover-figure { width: min(100%, 405px); margin: 0; justify-self: end; padding: 1px; background: #8fa678; box-shadow: 10px 10px 0 #38574b; }
     .cover-figure img { display: block; width: 100%; height: auto; }
@@ -75,15 +75,15 @@
 <div class="cover">
   <div class="shell cover-grid">
     <div class="cover-copy">
-      <p class="context" id="about">Ehsan Chatraei, PhD <span>·</span> University of Manitoba</p>
+      <p class="cover-name" id="about">Ehsan Chatraei, PhD</p>
       <h1 class="cover-title">Digital agriculture for precision crop and soil management</h1>
       <p class="cover-deck">Precision agriculture research on soil health, plant nutrition, and early disease detection spans leaf, canopy, and field scales, combining multispectral, hyperspectral, and LiDAR data from satellite and drone surveys with field spectroradiometer measurements to pinpoint where to scout, where to sample, and which parts of a field may need a different fertilizer rate, with the broader aim of strengthening food security and reducing the environmental impact of farming.</p>
       <p class="cover-education"><strong>PhD awarded in 2026</strong> · Soil Science (Digital Agronomy), University of Manitoba</p>
       <nav class="cover-profile-links" aria-label="Professional profiles and contact">
+        <a href="mailto:chatraee@myumanitoba.ca"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Email</a>
         <a href="https://www.linkedin.com/in/ehsanchatraei/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M8 10v6.5m0-9v.1m4 8.9V10m0 2.1a2 2 0 0 1 4 0v4.4"/></svg>LinkedIn</a>
         <a href="https://scholar.google.com/citations?hl=en&amp;user=t4ILGNAAAAAJ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2.5 9 9.5-5 9.5 5-9.5 5-9.5-5Zm4 2.5V17c2.8 2.3 8.2 2.3 11 0v-5.5M21.5 9v6"/></svg>Google Scholar</a>
         <a href="https://orcid.org/0009-0009-6779-9754"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 10.1v5.3m0-7.6v.1m3.5 2.2h1.8a2.65 2.65 0 0 1 0 5.3H12z"/></svg>ORCID</a>
-        <a href="mailto:chatraee@myumanitoba.ca"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Email</a>
         <a href="https://digitalagroecosystemslab.ca/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3.5h6.5V10m-.2-6.3L11 13m7-1v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Lab website</a>
       </nav>
       <div class="cover-documents" aria-label="Homepage actions">

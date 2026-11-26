@@ -44,8 +44,8 @@
     .pdf-viewer-actions-group [hidden] { display: none; }
     .pdf-viewer.visual-preview { width: min(96vw, 92rem); max-height: 94dvh; }
     .pdf-viewer.visual-preview .pdf-preview-pages { max-height: 80dvh; min-height: 0; }
-    .pdf-viewer.visual-preview .pdf-preview-pages img { display: block; width: 100%; max-width: none; }
-    .pdf-viewer.visual-preview.preview-zoomed .pdf-preview-pages img { width: max(94rem, 150%); margin: 0; }
+    .pdf-viewer.visual-preview .pdf-preview-pages img { display: block; width: auto; max-width: 100%; max-height: min(80dvh, calc(94dvh - 5rem)); object-fit: contain; }
+    .pdf-viewer.visual-preview.preview-zoomed .pdf-preview-pages img { width: max(94rem, 150%); max-width: none; max-height: none; margin: 0; }
     .pdf-viewer.cv-preview.preview-zoomed .pdf-preview-pages img { display: block; width: max(60rem, 135%); max-width: none; margin: 0; }
     @media (max-width: 760px) {
       #home .cover-grid { display: block; padding-top: clamp(13rem, 55vw, 23rem); }

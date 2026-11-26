@@ -14,7 +14,7 @@
   <link rel="icon" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;650;700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="styles.css?v=7">
   <link rel="stylesheet" href="research-site.css?v=20">
   <script src="site.js?v=21" defer></script>
@@ -26,24 +26,26 @@
     .soil-evidence { margin-block: 1.35rem; }
     .soil-field-views img { aspect-ratio: 5 / 4; height: auto; object-fit: cover; }
     .soil-field-views figcaption { margin-top: .4rem; }
-    #home .cover { position: relative; isolation: isolate; overflow: hidden; }
-    #home .cover-grid { display: flex; align-items: center; min-height: clamp(29rem, 49vw, 41rem); padding-block: clamp(3rem, 5vw, 5.6rem); }
-    #home .cover-copy { position: relative; width: min(65%, 44rem); }
-    #home .cover-title { margin-block: .85rem 1.15rem; font-family: Manrope, "Segoe UI", sans-serif; font-size: clamp(2.3rem, 4.25vw, 4.1rem); font-weight: 600; letter-spacing: -.047em; line-height: 1.05; text-wrap: balance; }
-    #home .cover-title span { display: block; color: var(--accent); }
-    #home .cover-deck { max-width: 64ch; font-size: clamp(1rem, 1.24vw, 1.13rem); line-height: 1.62; text-wrap: pretty; }
-    .cover-background { position: absolute; z-index: -1; inset: 0 0 0 auto; width: min(54%, 59rem); overflow: hidden; margin: 0; }
-    .cover-background img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-    .cover-background::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--forest), rgb(16 44 36 / .89) 15%, rgb(16 44 36 / .24) 44%, transparent 69%); }
-    .cover-education { margin-top: .9rem; color: #e4ead9; font-size: .94rem; }
-    .cover-profile-links { display: flex; flex-wrap: wrap; gap: .15rem 1.1rem; margin-top: 1.1rem; }
-    .cover-profile-links a { display: inline-flex; align-items: center; gap: .28rem; min-height: 2rem; color: var(--accent); font-size: .78rem; letter-spacing: .065em; font-weight: 650; text-transform: uppercase; }
+    #home .cover { background: radial-gradient(ellipse at 90% 42%, #204538 0%, var(--forest) 57%); }
+    #home .cover-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(13rem, 28%); align-items: center; gap: clamp(1.75rem, 4.2vw, 4rem); padding-block: clamp(3rem, 5vw, 5.25rem); }
+    #home .cover-copy { width: 100%; font-family: "Source Sans 3", "Segoe UI", sans-serif; }
+    #home .cover-copy .context { font-size: .88rem; }
+    #home .cover-title { margin-block: .85rem 1.25rem; font-family: "DM Sans", "Segoe UI", sans-serif; font-size: clamp(2.65rem, 4.15vw, 4.55rem); font-weight: 600; letter-spacing: -.05em; line-height: 1.04; }
+    #home .cover-title span { display: block; color: var(--accent); text-wrap: balance; }
+    #home .cover-deck { max-width: 76ch; color: #eaf0e4; font-size: clamp(1.2rem, 1.55vw, 1.38rem); line-height: 1.56; text-wrap: pretty; }
+    .cover-figure { margin: 0; width: 100%; max-width: 23rem; justify-self: end; border-radius: .7rem; overflow: hidden; border: 1px solid #759183; box-shadow: 0 1.1rem 2.6rem rgb(5 19 14 / .32); }
+    .cover-figure img { display: block; width: 100%; height: auto; }
+    .cover-education { margin-top: 1.15rem; color: #e4ead9; font-size: 1.12rem; line-height: 1.45; }
+    .cover-education strong { color: var(--cream); font-weight: 700; }
+    .cover-profile-links { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; margin-top: 1.15rem; }
+    .cover-profile-links a { display: inline-flex; align-items: center; gap: .45rem; min-height: 2.75rem; color: var(--accent); font-size: 1.08rem; font-weight: 650; white-space: nowrap; text-decoration: none; }
     .cover-profile-links a:hover { color: var(--cream); text-decoration: underline; text-underline-offset: .3em; }
-    .cover-profile-links span { font-size: .9em; }
-    .cover-documents { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .75rem; }
-    .cover-documents button { display: inline-flex; align-items: center; gap: .55rem; min-height: 2.7rem; padding: .53rem .85rem; border: 1px solid #89a498; border-radius: 4px; background: rgb(16 44 36 / .7); color: var(--cream); font: inherit; font-size: .84rem; text-decoration: none; cursor: pointer; }
+    .cover-profile-links svg, .cover-documents svg { width: 1.4rem; height: 1.4rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
+    .cover-documents { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: .9rem; }
+    .cover-documents button { display: inline-flex; align-items: center; justify-content: flex-start; gap: .6rem; min-height: 3.15rem; padding: .55rem .95rem; border: 1px solid #89a498; border-radius: 4px; background: var(--forest); color: var(--cream); font: inherit; font-size: 1.08rem; text-decoration: none; text-align: left; cursor: pointer; }
     .cover-documents button:hover { border-color: var(--accent); color: var(--accent); }
-    .cover-documents svg { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    #home .cover-actions { margin-top: 1.15rem; }
+    #home .cover-actions .cta { font-size: 1.04rem; }
     .disease-figures { margin-top: 1.4rem; }
     .disease-figures .paper-display { gap: .65rem; }
     .figure-preview { display: block; width: 100%; padding: 0; background: #fff; border: 0; cursor: zoom-in; }
@@ -58,12 +60,9 @@
     .pdf-viewer.visual-preview.preview-zoomed .pdf-preview-pages img { width: max(94rem, 150%); max-width: none; max-height: none; margin: 0; }
     .pdf-viewer.cv-preview.preview-zoomed .pdf-preview-pages img { display: block; width: max(60rem, 135%); max-width: none; margin: 0; }
     @media (max-width: 760px) {
-      #home .cover-grid { display: block; padding-top: clamp(13rem, 55vw, 23rem); }
-      #home .cover-copy { width: 100%; }
-      #home .cover-title { font-size: clamp(2.1rem, 7vw, 3.4rem); }
-      .cover-background { inset: 0 0 auto; width: 100%; height: clamp(17rem, 71vw, 29rem); }
-      .cover-background img { object-position: center 26%; }
-      .cover-background::after { background: linear-gradient(0deg, var(--forest) 5%, rgb(16 44 36 / .65) 25%, transparent 66%); }
+      #home .cover-grid { grid-template-columns: minmax(0, 1fr); padding-block: 2.55rem 2.8rem; gap: 1.75rem; }
+      #home .cover-title { font-size: clamp(2.4rem, 8vw, 3.7rem); }
+      .cover-figure { width: min(62%, 16rem); justify-self: start; }
       .disease-figures { grid-template-columns: minmax(0, 1fr); }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -79,18 +78,18 @@
 <main id="main">
 <section id="home" aria-label="Home">
 <div class="cover">
-  <figure class="cover-background"><img src="portrait-campus.jpg" alt="Ehsan Chatraei on the University of Manitoba campus" width="1254" height="1254" fetchpriority="high"></figure>
   <div class="shell cover-grid">
     <div class="cover-copy">
       <p class="context" id="about">Ehsan Chatraei, PhD <span>·</span> University of Manitoba</p>
       <h1 class="cover-title">Remote sensing of soils and crops <span>for more sustainable food production</span></h1>
       <p class="cover-deck">Precision agriculture research on soil health, plant nutrition, and early disease detection spans leaf, canopy, and field scales, combining multispectral, hyperspectral, and LiDAR data from satellite and drone surveys with field spectroradiometer measurements to pinpoint where to scout, where to sample, and which parts of a field may need a different fertilizer rate, with the broader aim of strengthening food security and reducing the environmental impact of farming.</p>
-      <p class="cover-education">PhD in Soil Science (Digital Agronomy), University of Manitoba · 2022–2026</p>
-      <nav class="cover-profile-links" aria-label="Professional profiles">
-        <a href="https://www.linkedin.com/in/ehsanchatraei/">LinkedIn <span aria-hidden="true">↗</span></a>
-        <a href="https://orcid.org/0009-0009-6779-9754">ORCID <span aria-hidden="true">↗</span></a>
-        <a href="https://www.researchgate.net/profile/Ehsan-Chatraei">ResearchGate <span aria-hidden="true">↗</span></a>
-        <a href="https://github.com/ehsanchatraei">GitHub <span aria-hidden="true">↗</span></a>
+      <p class="cover-education"><strong>PhD awarded in 2026</strong> · Soil Science (Digital Agronomy), University of Manitoba</p>
+      <nav class="cover-profile-links" aria-label="Professional profiles and contact">
+        <a href="https://www.linkedin.com/in/ehsanchatraei/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M8 10v6.5m0-9v.1m4 8.9V10m0 2.1a2 2 0 0 1 4 0v4.4"/></svg>LinkedIn</a>
+        <a href="https://scholar.google.com/citations?hl=en&amp;user=t4ILGNAAAAAJ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2.5 9 9.5-5 9.5 5-9.5 5-9.5-5Zm4 2.5V17c2.8 2.3 8.2 2.3 11 0v-5.5M21.5 9v6"/></svg>Google Scholar</a>
+        <a href="https://orcid.org/0009-0009-6779-9754"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 10.1v5.3m0-7.6v.1m3.5 2.2h1.8a2.65 2.65 0 0 1 0 5.3H12z"/></svg>ORCID</a>
+        <a href="mailto:chatraee@myumanitoba.ca"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Email</a>
+        <a href="https://digitalagroecosystemslab.ca/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3.5h6.5V10m-.2-6.3L11 13m7-1v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Lab website</a>
       </nav>
       <div class="cover-documents" aria-label="Profile documents">
         <button type="button" class="document-preview-link" id="curriculum-vitae" aria-haspopup="dialog" data-preview-src="curriculum-vitae-preview.png" data-preview-title="Curriculum vitae" data-preview-mode="cv">
@@ -102,8 +101,9 @@
           Professional &amp; Technical Progression
         </button>
       </div>
-      <div class="cover-actions"><a class="cta" href="#research">Explore the research <span aria-hidden="true">→</span></a><a class="soft-link" href="mailto:chatraee@myumanitoba.ca">Email</a><a class="soft-link" href="https://digitalagroecosystemslab.ca/">Lab website</a></div>
+      <div class="cover-actions"><a class="cta" href="#research">Explore the research <span aria-hidden="true">→</span></a></div>
     </div>
+    <figure class="cover-figure"><img src="portrait-campus.jpg" alt="Ehsan Chatraei on the University of Manitoba campus" width="1254" height="1254" fetchpriority="high"></figure>
   </div>
 </div>
 <div class="shell home-grid">
@@ -373,7 +373,7 @@
 </main>
 <footer class="journal-footer" id="contact"><div class="shell footer-grid">
   <div><h2>Get in touch</h2><a href="mailto:chatraee@myumanitoba.ca">chatraee@myumanitoba.ca</a></div>
-  <div><p>Digital AgroEcosystems Lab<br>University of Manitoba · Winnipeg, Canada</p><div class="footer-links"><a href="https://orcid.org/0009-0009-6779-9754">ORCID</a><a href="https://www.linkedin.com/in/ehsanchatraei/">LinkedIn</a><a href="https://github.com/ehsanchatraei">GitHub</a></div></div>
+  <div><p>Digital AgroEcosystems Lab<br>University of Manitoba · Winnipeg, Canada</p><div class="footer-links"><a href="https://orcid.org/0009-0009-6779-9754">ORCID</a><a href="https://www.linkedin.com/in/ehsanchatraei/">LinkedIn</a></div></div>
 </div></footer>
 
 <dialog class="pdf-viewer" id="pdf-viewer" aria-labelledby="pdf-viewer-title">

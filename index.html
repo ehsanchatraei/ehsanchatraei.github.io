@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Remote sensing of soils and crops for more sustainable food production | Ehsan Chatraei</title>
+  <title>Digital agriculture for precision crop and soil management | Ehsan Chatraei</title>
   <meta name="description" content="Ehsan Chatraei, PhD, is a soil scientist and digital agronomy researcher working on crop nutrition and soils with drone and satellite remote sensing.">
   <meta name="theme-color" content="#102b22">
   <link rel="canonical" href="https://ehsanchatraei.github.io/">
-  <meta property="og:title" content="Remote sensing of soils and crops for more sustainable food production | Ehsan Chatraei">
+  <meta property="og:title" content="Digital agriculture for precision crop and soil management | Ehsan Chatraei">
   <meta property="og:description" content="Ehsan Chatraei, PhD, is a soil scientist and digital agronomy researcher working on crop nutrition and soils with drone and satellite remote sensing.">
   <meta property="og:url" content="https://ehsanchatraei.github.io/">
   <meta property="og:image" content="https://ehsanchatraei.github.io/portrait-campus.jpg">
@@ -24,24 +24,23 @@
     .soil-field-views img { aspect-ratio: 5 / 4; height: auto; object-fit: cover; }
     .soil-field-views figcaption { margin-top: .4rem; }
     #home .cover { background: var(--forest); }
-    #home .cover-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); align-items: start; gap: clamp(2rem, 6vw, 6rem); padding-block: clamp(3rem, 6vw, 6.25rem); }
+    #home .cover-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); align-items: center; min-height: 0; gap: clamp(2rem, 5.5vw, 5.5rem); padding-block: clamp(2.5rem, 4vw, 4rem); }
     #home .cover-copy { min-width: 0; font-family: var(--sans); }
     #home .cover-copy .context { font-size: .83rem; }
-    #home .cover-title { margin-block: .95rem 1.25rem; font-family: var(--serif); font-size: clamp(2.65rem, 5.15vw, 5.25rem); font-weight: 400; line-height: .99; letter-spacing: -.063em; text-wrap: balance; }
+    #home .cover-title { margin-block: .72rem 1.1rem; font-family: var(--serif); font-size: clamp(2.5rem, 4.2vw, 4.4rem); font-weight: 400; line-height: .99; letter-spacing: -.063em; text-wrap: balance; }
     #home .cover-deck { max-width: 72ch; color: #eaf0e4; font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.62; }
-    .cover-figure { width: min(100%, 405px); margin: .65rem 0 0; justify-self: end; padding: 1px; background: #8fa678; box-shadow: 10px 10px 0 #38574b; }
+    .cover-figure { width: min(100%, 405px); margin: 0; justify-self: end; padding: 1px; background: #8fa678; box-shadow: 10px 10px 0 #38574b; }
     .cover-figure img { display: block; width: 100%; height: auto; }
-    .cover-education { margin-top: 1.15rem; color: #e4ead9; font-size: 1.12rem; line-height: 1.45; }
+    .cover-education { margin-top: .85rem; color: #e4ead9; font-size: 1.12rem; line-height: 1.45; }
     .cover-education strong { color: var(--cream); font-weight: 700; }
-    .cover-profile-links { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; margin-top: 1.15rem; }
+    .cover-profile-links { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; margin-top: .65rem; }
     .cover-profile-links a { display: inline-flex; align-items: center; gap: .45rem; min-height: 2.75rem; color: var(--accent); font-size: 1.08rem; font-weight: 650; white-space: nowrap; text-decoration: none; }
     .cover-profile-links a:hover { color: var(--cream); text-decoration: underline; text-underline-offset: .3em; }
     .cover-profile-links svg, .cover-documents svg { width: 1.4rem; height: 1.4rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
-    .cover-documents { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: .9rem; }
+    .cover-documents { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin-top: .65rem; }
     .cover-documents button { display: inline-flex; align-items: center; justify-content: flex-start; gap: .6rem; min-height: 3.15rem; padding: .55rem .95rem; border: 1px solid #89a498; border-radius: 4px; background: var(--forest); color: var(--cream); font: inherit; font-size: 1.08rem; text-decoration: none; text-align: left; cursor: pointer; }
     .cover-documents button:hover { border-color: var(--accent); color: var(--accent); }
-    #home .cover-actions { margin-top: 1.15rem; }
-    #home .cover-actions .cta { font-size: 1.04rem; }
+    #home .cover-documents .cta { min-height: 3.15rem; padding-inline: .8rem; font-size: .95rem; }
     .disease-figures { margin-top: 1.4rem; }
     .disease-figures .paper-display { gap: .65rem; }
     .figure-preview { display: block; width: 100%; padding: 0; background: #fff; border: 0; cursor: zoom-in; }
@@ -56,8 +55,8 @@
     .pdf-viewer.visual-preview.preview-zoomed .pdf-preview-pages img { width: max(94rem, 150%); max-width: none; max-height: none; margin: 0; }
     .pdf-viewer.cv-preview.preview-zoomed .pdf-preview-pages img { display: block; width: max(60rem, 135%); max-width: none; margin: 0; }
     @media (max-width: 760px) {
-      #home .cover-grid { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding-block: 2.55rem 2.8rem; }
-      #home .cover-title { font-size: clamp(2.6rem, 8.5vw, 4.2rem); }
+      #home .cover-grid { grid-template-columns: minmax(0, 1fr); gap: 1.65rem; padding-block: 2.15rem 2.5rem; }
+      #home .cover-title { font-size: clamp(2.35rem, 7.4vw, 3.6rem); }
       .cover-figure { width: min(78%, 19rem); margin-top: 0; justify-self: start; }
       .disease-figures { grid-template-columns: minmax(0, 1fr); }
     }
@@ -77,7 +76,7 @@
   <div class="shell cover-grid">
     <div class="cover-copy">
       <p class="context" id="about">Ehsan Chatraei, PhD <span>·</span> University of Manitoba</p>
-      <h1 class="cover-title">Remote sensing of soils and crops for more sustainable food production</h1>
+      <h1 class="cover-title">Digital agriculture for precision crop and soil management</h1>
       <p class="cover-deck">Precision agriculture research on soil health, plant nutrition, and early disease detection spans leaf, canopy, and field scales, combining multispectral, hyperspectral, and LiDAR data from satellite and drone surveys with field spectroradiometer measurements to pinpoint where to scout, where to sample, and which parts of a field may need a different fertilizer rate, with the broader aim of strengthening food security and reducing the environmental impact of farming.</p>
       <p class="cover-education"><strong>PhD awarded in 2026</strong> · Soil Science (Digital Agronomy), University of Manitoba</p>
       <nav class="cover-profile-links" aria-label="Professional profiles and contact">
@@ -87,7 +86,8 @@
         <a href="mailto:chatraee@myumanitoba.ca"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Email</a>
         <a href="https://digitalagroecosystemslab.ca/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3.5h6.5V10m-.2-6.3L11 13m7-1v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Lab website</a>
       </nav>
-      <div class="cover-documents" aria-label="Profile documents">
+      <div class="cover-documents" aria-label="Homepage actions">
+        <a class="cta" href="#research">Explore the research <span aria-hidden="true">→</span></a>
         <button type="button" class="document-preview-link" id="curriculum-vitae" aria-haspopup="dialog" data-preview-src="curriculum-vitae-preview.png" data-preview-title="Curriculum vitae" data-preview-mode="cv">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 11h6m-6 4h6m-6 3h4"/></svg>
           Curriculum vitae
@@ -97,7 +97,6 @@
           Professional &amp; Technical Progression
         </button>
       </div>
-      <div class="cover-actions"><a class="cta" href="#research">Explore the research <span aria-hidden="true">→</span></a></div>
     </div>
     <figure class="cover-figure">
       <img src="portrait-campus.jpg" alt="Ehsan Chatraei on the University of Manitoba campus" width="1254" height="1254" fetchpriority="high">

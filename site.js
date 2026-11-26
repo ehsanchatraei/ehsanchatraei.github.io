@@ -47,8 +47,8 @@ if (pdfViewer && typeof pdfViewer.showModal === 'function') {
       event.preventDefault();
       activeLink = link;
       title.textContent = link.dataset.pdfTitle;
-      openPdf.href = link.href;
-      downloadPdf.href = link.href;
+      if (openPdf) openPdf.href = link.href;
+      if (downloadPdf) downloadPdf.href = link.href;
       image.alt = link.dataset.pdfTitle + ' document preview';
       image.src = link.href.replace(/\.pdf$/, '-preview.jpg');
       pdfViewer.showModal();

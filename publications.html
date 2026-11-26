@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+  (() => {
+    const hash = location.hash.slice(1);
+    const target = (!hash || hash === 'main' || hash === 'top') ? 'publications' : hash;
+    location.replace('./' + location.search + '#' + target);
+  })();
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Publications | Ehsan Chatraei</title>
   <meta name="description" content="Papers, research figures, and open datasets in remote sensing, precision agriculture, and soil science.">
   <meta name="theme-color" content="#102b22">
-  <link rel="canonical" href="https://ehsanchatraei.github.io/publications.html">
+  <link rel="canonical" href="https://ehsanchatraei.github.io/#publications">
   <meta property="og:title" content="Publications | Ehsan Chatraei">
   <meta property="og:description" content="Papers, research figures, and open datasets in remote sensing, precision agriculture, and soil science.">
   <meta property="og:url" content="https://ehsanchatraei.github.io/publications.html">

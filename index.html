@@ -65,20 +65,28 @@
     .credential-groups { display: grid; gap: 1.2rem; padding-block: clamp(1.75rem, 4vw, 3.25rem); }
     .credential-group { --group-accent: #78964f; display: grid; grid-template-columns: minmax(11rem, .73fr) minmax(0, 2.65fr); gap: clamp(.85rem, 2vw, 1.75rem); align-items: start; padding: clamp(1rem, 2.4vw, 1.6rem); border: 1px solid #c8d5c7; border-top: 3px solid var(--group-accent); background: #f1f4ea; }
     .credential-group--geospatial { --group-accent: #559186; }
-    .credential-group--rpas { --group-accent: #af8358; }
-    .credential-group h2 { max-width: 17ch; margin: 0; color: var(--forest); font: 400 clamp(1.4rem, 2.55vw, 1.9rem)/1.13 var(--serif); letter-spacing: -.024em; text-wrap: balance; }
+    .credential-group--agriculture { --group-accent: #a48245; }
+    .credential-group--rpas { --group-accent: #8a8375; }
+    .credential-group-heading { display: grid; justify-items: start; gap: .75rem; }
+    .credential-group-icon { width: 1.5rem; height: 1.5rem; box-sizing: content-box; padding: .56rem; color: #234f3e; background: #e2ebdd; border: 1px solid #c9d8c5; border-radius: .4rem; fill: none; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
+    .credential-group h2 { max-width: 16ch; margin: 0; color: var(--forest); font: 400 clamp(1.4rem, 2.55vw, 1.9rem)/1.13 var(--serif); letter-spacing: -.024em; text-wrap: balance; }
     .credential-group-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; margin: 0; padding: 0; list-style: none; }
-    .credential-group-list li { display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; min-width: 0; padding: .78rem .85rem; border: 1px solid #d5ded0; background: #fafbf6; }
-    .credential-entry { flex: 1; }
+    .credential-group-list li { display: flex; align-items: center; gap: .75rem; min-width: 0; min-height: 7.1rem; padding: .8rem; border: 1px solid #d5ded0; background: #fafbf6; }
+    .credential-entry { flex: 1; min-width: 0; }
     .credential-entry h3 { margin: 0; color: var(--ink); font: 650 clamp(.96rem, 1.4vw, 1.06rem)/1.3 var(--sans); }
-    .credential-entry p { margin: .22rem 0 0; color: #3d5649; font-size: .9rem; line-height: 1.35; }
-    .credential-group-list .document-preview-link { display: inline-flex; align-items: center; gap: .35rem; min-height: 2.35rem; padding: .23rem .62rem; border: 1px solid #bfd1c4; border-radius: 3px; background: #e8f0e5; color: #174d3d; font: 650 .85rem/1.2 var(--sans); text-decoration: none; }
-    .credential-group-list .document-preview-link:hover { background: #d8e8d7; text-decoration: underline; text-underline-offset: .15em; }
+    .credential-entry p { margin: .3rem 0 0; color: #3d5649; font-size: .9rem; line-height: 1.35; }
+    .credential-group-list .credential-preview { display: grid; justify-items: center; align-content: start; gap: .32rem; flex: 0 0 clamp(4.4rem, 25%, 7rem); min-width: 0; padding: .28rem; border: 1px solid #cad8cb; border-radius: .3rem; background: #eef3e9; color: #174d3d; text-decoration: none; }
+    .credential-thumbnail { display: grid; place-items: center; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #fff; }
+    .credential-thumbnail img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .credential-preview-label { font: 650 .76rem/1.4 var(--sans); }
+    .credential-group-list .credential-preview:hover { background: #dfeadb; border-color: #8da998; }
+    .credential-preview:hover .credential-preview-label { text-decoration: underline; text-underline-offset: .13em; }
     @media (max-width: 920px) {
       .credential-group { grid-template-columns: minmax(0, 1fr); }
+      .credential-group-heading { display: flex; align-items: center; gap: .65rem; }
       .credential-group h2 { max-width: none; }
     }
-    @media (max-width: 560px) { .credential-group-list { grid-template-columns: minmax(0, 1fr); } }
+    @media (max-width: 650px) { .credential-group-list { grid-template-columns: minmax(0, 1fr); } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print { .single-page .site-header { position: static; } }
   </style>
@@ -378,34 +386,60 @@
   </div>
   <div id="credential-documents" class="shell credential-groups">
     <section class="credential-group credential-group--leadership" aria-labelledby="credential-leadership">
-      <h2 id="credential-leadership">Leadership, management &amp; innovation</h2>
+      <div class="credential-group-heading">
+        <svg class="credential-group-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="5" rx="1"/><path d="M12 8v4m-6 4v-4h12v4"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/></svg>
+        <h2 id="credential-leadership">Leadership &amp; management</h2>
+      </div>
       <ul class="credential-group-list">
         <li>
           <div class="credential-entry"><h3>Researcher Management and Leadership Training</h3><p>University of Colorado System · 2026</p></div>
-          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="research-leadership-preview.jpg" data-preview-title="Researcher Management and Leadership Training" aria-label="View Researcher Management and Leadership Training">Preview <span aria-hidden="true">↗</span></button>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="research-leadership-preview.jpg" data-preview-title="Researcher Management and Leadership Training" aria-label="Preview Researcher Management and Leadership Training">
+            <span class="credential-thumbnail"><img src="research-leadership-preview.jpg" width="1155" height="893" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
         </li>
         <li>
           <div class="credential-entry"><h3>Google Project Management Professional Certificate</h3><p>Google · 2026</p></div>
-          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="google-project-management-preview.jpg" data-preview-title="Google Project Management Professional Certificate" aria-label="View Google Project Management Professional Certificate">Preview <span aria-hidden="true">↗</span></button>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="google-project-management-preview.jpg" data-preview-title="Google Project Management Professional Certificate" aria-label="Preview Google Project Management Professional Certificate">
+            <span class="credential-thumbnail"><img src="google-project-management-preview.jpg" width="1228" height="868" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
         </li>
         <li>
           <div class="credential-entry"><h3>Digital Product Management: Modern Fundamentals</h3><p>University of Virginia · 2026</p></div>
-        </li>
-        <li>
-          <div class="credential-entry"><h3>Discover Agri-Food</h3><p>Lab2Market</p></div>
-          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="lab2market-certificate-preview.jpg" data-preview-title="Discover Agri-Food" aria-label="View Discover Agri-Food">Preview <span aria-hidden="true">↗</span></button>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="digital-product-management-preview.jpg" data-preview-title="Digital Product Management: Modern Fundamentals" aria-label="Preview Digital Product Management: Modern Fundamentals">
+            <span class="credential-thumbnail"><img src="digital-product-management-preview.jpg" width="1708" height="1320" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
         </li>
       </ul>
     </section>
     <section class="credential-group credential-group--geospatial" aria-labelledby="credential-geospatial">
-      <h2 id="credential-geospatial">Remote sensing &amp; geospatial analysis</h2>
+      <div class="credential-group-heading">
+        <svg class="credential-group-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg>
+        <h2 id="credential-geospatial">Remote sensing &amp; data science</h2>
+      </div>
       <ul class="credential-group-list">
         <li>
           <div class="credential-entry"><h3>Fundamentals of Geospatial Data Analysis using Foundation Models</h3><p>STFC Hartree Centre · 2026</p></div>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="geospatial-foundation-models-preview.jpg" data-preview-title="Fundamentals of Geospatial Data Analysis using Foundation Models" aria-label="Preview Fundamentals of Geospatial Data Analysis using Foundation Models">
+            <span class="credential-thumbnail"><img src="geospatial-foundation-models-preview.jpg" width="1720" height="1216" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>Python for Data Science &amp; AI: Hands-On Development</h3><p>IBM · 2024</p></div>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="python-for-data-science-and-ai-preview.jpg" data-preview-title="Python for Data Science &amp; AI: Hands-On Development" aria-label="Preview Python for Data Science &amp; AI: Hands-On Development">
+            <span class="credential-thumbnail"><img src="python-for-data-science-and-ai-preview.jpg" width="1708" height="1320" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
         </li>
         <li>
           <div class="credential-entry"><h3>Hyperspectral Thermal Image Unmixing</h3><p>GEO University</p></div>
-          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="hyperspectral-thermal-unmixing-preview.jpg" data-preview-title="Hyperspectral Thermal Image Unmixing" aria-label="View Hyperspectral Thermal Image Unmixing">Preview <span aria-hidden="true">↗</span></button>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="hyperspectral-thermal-unmixing-preview.jpg" data-preview-title="Hyperspectral Thermal Image Unmixing" aria-label="Preview Hyperspectral Thermal Image Unmixing">
+            <span class="credential-thumbnail"><img src="hyperspectral-thermal-unmixing-preview.jpg" width="1228" height="868" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
         </li>
         <li>
           <div class="credential-entry"><h3>EOS Platform Remote Sensing and Satellite Image Processing</h3><p>GEO University · 2024</p></div>
@@ -415,16 +449,47 @@
         </li>
       </ul>
     </section>
+    <section class="credential-group credential-group--agriculture" aria-labelledby="credential-agriculture">
+      <div class="credential-group-heading">
+        <svg class="credential-group-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-9m0 2C6 14 4 10 4 5c5 0 8 3 8 9Zm0 0c0-6 3-9 8-9 0 5-2 9-8 9ZM5 21h14"/></svg>
+        <h2 id="credential-agriculture">Agriculture &amp; food systems</h2>
+      </div>
+      <ul class="credential-group-list">
+        <li>
+          <div class="credential-entry"><h3>Agriculture, Economics and Nature</h3><p>University of Western Australia · 2024</p></div>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="agriculture-economics-and-nature-preview.jpg" data-preview-title="Agriculture, Economics and Nature" aria-label="Preview Agriculture, Economics and Nature">
+            <span class="credential-thumbnail"><img src="agriculture-economics-and-nature-preview.jpg" width="1708" height="1320" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>Discover Agri-Food</h3><p>Lab2Market</p></div>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="lab2market-certificate-preview.jpg" data-preview-title="Discover Agri-Food" aria-label="Preview Discover Agri-Food">
+            <span class="credential-thumbnail"><img src="lab2market-certificate-preview.jpg" width="1228" height="868" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
+        </li>
+      </ul>
+    </section>
     <section class="credential-group credential-group--rpas" aria-labelledby="credential-rpas">
-      <h2 id="credential-rpas">RPAS certification &amp; training</h2>
+      <div class="credential-group-heading">
+        <svg class="credential-group-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="6" height="6" rx="1.4"/><path d="m9 9-4-4m10 4 4-4m-4 10 4 4M9 15l-4 4M2 5h6m8 0h6M2 19h6m8 0h6"/></svg>
+        <h2 id="credential-rpas">RPAS certification &amp; training</h2>
+      </div>
       <ul class="credential-group-list">
         <li>
           <div class="credential-entry"><h3>RPAS Pilot Certificate, Basic Operations</h3><p>Transport Canada · 2023</p></div>
-          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="transport-canada-rpas-preview.jpg" data-preview-title="RPAS Pilot Certificate, Basic Operations" aria-label="View RPAS Pilot Certificate, Basic Operations">Preview <span aria-hidden="true">↗</span></button>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="transport-canada-rpas-preview.jpg" data-preview-title="RPAS Pilot Certificate, Basic Operations" aria-label="Preview RPAS Pilot Certificate, Basic Operations">
+            <span class="credential-thumbnail"><img src="transport-canada-rpas-preview.jpg" width="893" height="1155" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
         </li>
         <li>
           <div class="credential-entry"><h3>Advanced Pilot Course</h3><p>RPAS Centre · 2025</p></div>
-          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="advanced-rpas-pilot-course-preview.jpg" data-preview-title="Advanced Pilot Course" aria-label="View Advanced Pilot Course">Preview <span aria-hidden="true">↗</span></button>
+          <button type="button" class="document-preview-link credential-preview" aria-haspopup="dialog" data-preview-src="advanced-rpas-pilot-course-preview.jpg" data-preview-title="Advanced Pilot Course" aria-label="Preview Advanced Pilot Course">
+            <span class="credential-thumbnail"><img src="advanced-rpas-pilot-course-preview.jpg" width="1228" height="868" alt="" loading="lazy" decoding="async" draggable="false"></span>
+            <span class="credential-preview-label" aria-hidden="true">Preview ↗</span>
+          </button>
         </li>
       </ul>
     </section>

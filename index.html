@@ -60,6 +60,25 @@
       .cover-figure { width: min(78%, 19rem); margin-top: 0; justify-self: start; }
       .disease-figures { grid-template-columns: minmax(0, 1fr); }
     }
+    #credentials .inner-heading { padding-block: clamp(2.15rem, 4vw, 3.35rem); }
+    #credentials .inner-heading h1 { font-size: clamp(2.75rem, 5vw, 4.35rem); }
+    .credential-groups { display: grid; gap: 1.2rem; padding-block: clamp(1.75rem, 4vw, 3.25rem); }
+    .credential-group { --group-accent: #78964f; display: grid; grid-template-columns: minmax(11rem, .73fr) minmax(0, 2.65fr); gap: clamp(.85rem, 2vw, 1.75rem); align-items: start; padding: clamp(1rem, 2.4vw, 1.6rem); border: 1px solid #c8d5c7; border-top: 3px solid var(--group-accent); background: #f1f4ea; }
+    .credential-group--geospatial { --group-accent: #559186; }
+    .credential-group--rpas { --group-accent: #af8358; }
+    .credential-group h2 { max-width: 17ch; margin: 0; color: var(--forest); font: 400 clamp(1.4rem, 2.55vw, 1.9rem)/1.13 var(--serif); letter-spacing: -.024em; text-wrap: balance; }
+    .credential-group-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; margin: 0; padding: 0; list-style: none; }
+    .credential-group-list li { display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; min-width: 0; padding: .78rem .85rem; border: 1px solid #d5ded0; background: #fafbf6; }
+    .credential-entry { flex: 1; }
+    .credential-entry h3 { margin: 0; color: var(--ink); font: 650 clamp(.96rem, 1.4vw, 1.06rem)/1.3 var(--sans); }
+    .credential-entry p { margin: .22rem 0 0; color: #3d5649; font-size: .9rem; line-height: 1.35; }
+    .credential-group-list .document-preview-link { display: inline-flex; align-items: center; gap: .35rem; min-height: 2.35rem; padding: .23rem .62rem; border: 1px solid #bfd1c4; border-radius: 3px; background: #e8f0e5; color: #174d3d; font: 650 .85rem/1.2 var(--sans); text-decoration: none; }
+    .credential-group-list .document-preview-link:hover { background: #d8e8d7; text-decoration: underline; text-underline-offset: .15em; }
+    @media (max-width: 920px) {
+      .credential-group { grid-template-columns: minmax(0, 1fr); }
+      .credential-group h2 { max-width: none; }
+    }
+    @media (max-width: 560px) { .credential-group-list { grid-template-columns: minmax(0, 1fr); } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print { .single-page .site-header { position: static; } }
   </style>
@@ -353,16 +372,63 @@
   </dl></div>
 </section></div>
 </section>
-<section id="credentials" aria-label="CV and credentials">
-<div class="inner-heading"><div class="shell">
-      <h1>Credentials</h1><p>Professional training and certificates.</p>
-    </div></div><div class="shell resources-body"><section id="credential-documents" class="resource-documents" aria-labelledby="documents-title">
-  <h2 id="documents-title" class="visually-hidden">Documents and certificates</h2>
-  <div class="section-body">
-    <h3 class="credential-heading">Professional credentials</h3>
-    <ul class="credential-list"><li><span class="issuer-badge" aria-hidden="true">TC</span><div><strong>RPAS Pilot Certificate, Basic Operations</strong><span>Transport Canada · 2023</span></div><button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="transport-canada-rpas-preview.jpg" data-preview-title="RPAS Pilot Certificate, Basic Operations" aria-label="View RPAS Pilot Certificate, Basic Operations">View</button></li><li><span class="issuer-badge" aria-hidden="true"><img src="badge-google.jpg" alt="" width="90" height="91" loading="lazy"></span><div><strong>Google Project Management Professional Certificate</strong><span>Google · 2026</span></div><button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="google-project-management-preview.jpg" data-preview-title="Google Project Management Professional Certificate" aria-label="View Google Project Management Professional Certificate">View</button></li><li><span class="issuer-badge" aria-hidden="true">CU</span><div><strong>Researcher Management and Leadership Training</strong><span>University of Colorado System · 2026</span></div><button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="research-leadership-preview.jpg" data-preview-title="Researcher Management and Leadership Training" aria-label="View Researcher Management and Leadership Training">View</button></li><li><span class="issuer-badge" aria-hidden="true">UVA</span><div><strong>Digital Product Management: Modern Fundamentals</strong><span>University of Virginia · 2026</span></div></li><li><span class="issuer-badge" aria-hidden="true">STFC</span><div><strong>Fundamentals of Geospatial Data Analysis using Foundation Models</strong><span>STFC Hartree Centre · 2026</span></div></li><li><span class="issuer-badge" aria-hidden="true">RPAS</span><div><strong>Advanced Pilot Course</strong><span>RPAS Centre · 2025</span></div><button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="advanced-rpas-pilot-course-preview.jpg" data-preview-title="Advanced Pilot Course" aria-label="View Advanced Pilot Course">View</button></li><li><span class="issuer-badge" aria-hidden="true">L2M</span><div><strong>Discover Agri-Food</strong><span>Lab2Market</span></div><button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="lab2market-certificate-preview.jpg" data-preview-title="Discover Agri-Food" aria-label="View Discover Agri-Food">View</button></li><li><span class="issuer-badge" aria-hidden="true">GEO</span><div><strong>Hyperspectral Thermal Image Unmixing</strong><span>GEO University</span></div><button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="hyperspectral-thermal-unmixing-preview.jpg" data-preview-title="Hyperspectral Thermal Image Unmixing" aria-label="View Hyperspectral Thermal Image Unmixing">View</button></li><li><span class="issuer-badge" aria-hidden="true">GEO</span><div><strong>EOS Platform Remote Sensing and Satellite Image Processing</strong><span>GEO University · 2024</span></div></li><li><span class="issuer-badge" aria-hidden="true">UT</span><div><strong>Satellite Imagery Processing with ENVI</strong><span>University of Tehran · 2021</span></div></li></ul>
+<section id="credentials" aria-labelledby="credentials-title">
+  <div class="inner-heading">
+    <div class="shell"><h1 id="credentials-title">Credentials</h1><p>Professional training and certificates.</p></div>
   </div>
-</section></div>
+  <div id="credential-documents" class="shell credential-groups">
+    <section class="credential-group credential-group--leadership" aria-labelledby="credential-leadership">
+      <h2 id="credential-leadership">Leadership, management &amp; innovation</h2>
+      <ul class="credential-group-list">
+        <li>
+          <div class="credential-entry"><h3>Researcher Management and Leadership Training</h3><p>University of Colorado System · 2026</p></div>
+          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="research-leadership-preview.jpg" data-preview-title="Researcher Management and Leadership Training" aria-label="View Researcher Management and Leadership Training">Preview <span aria-hidden="true">↗</span></button>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>Google Project Management Professional Certificate</h3><p>Google · 2026</p></div>
+          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="google-project-management-preview.jpg" data-preview-title="Google Project Management Professional Certificate" aria-label="View Google Project Management Professional Certificate">Preview <span aria-hidden="true">↗</span></button>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>Digital Product Management: Modern Fundamentals</h3><p>University of Virginia · 2026</p></div>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>Discover Agri-Food</h3><p>Lab2Market</p></div>
+          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="lab2market-certificate-preview.jpg" data-preview-title="Discover Agri-Food" aria-label="View Discover Agri-Food">Preview <span aria-hidden="true">↗</span></button>
+        </li>
+      </ul>
+    </section>
+    <section class="credential-group credential-group--geospatial" aria-labelledby="credential-geospatial">
+      <h2 id="credential-geospatial">Remote sensing &amp; geospatial analysis</h2>
+      <ul class="credential-group-list">
+        <li>
+          <div class="credential-entry"><h3>Fundamentals of Geospatial Data Analysis using Foundation Models</h3><p>STFC Hartree Centre · 2026</p></div>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>Hyperspectral Thermal Image Unmixing</h3><p>GEO University</p></div>
+          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="hyperspectral-thermal-unmixing-preview.jpg" data-preview-title="Hyperspectral Thermal Image Unmixing" aria-label="View Hyperspectral Thermal Image Unmixing">Preview <span aria-hidden="true">↗</span></button>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>EOS Platform Remote Sensing and Satellite Image Processing</h3><p>GEO University · 2024</p></div>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>Satellite Imagery Processing with ENVI</h3><p>University of Tehran · 2021</p></div>
+        </li>
+      </ul>
+    </section>
+    <section class="credential-group credential-group--rpas" aria-labelledby="credential-rpas">
+      <h2 id="credential-rpas">RPAS certification &amp; training</h2>
+      <ul class="credential-group-list">
+        <li>
+          <div class="credential-entry"><h3>RPAS Pilot Certificate, Basic Operations</h3><p>Transport Canada · 2023</p></div>
+          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="transport-canada-rpas-preview.jpg" data-preview-title="RPAS Pilot Certificate, Basic Operations" aria-label="View RPAS Pilot Certificate, Basic Operations">Preview <span aria-hidden="true">↗</span></button>
+        </li>
+        <li>
+          <div class="credential-entry"><h3>Advanced Pilot Course</h3><p>RPAS Centre · 2025</p></div>
+          <button type="button" class="document-preview-link" aria-haspopup="dialog" data-preview-src="advanced-rpas-pilot-course-preview.jpg" data-preview-title="Advanced Pilot Course" aria-label="View Advanced Pilot Course">Preview <span aria-hidden="true">↗</span></button>
+        </li>
+      </ul>
+    </section>
+  </div>
 </section>
 </main>
 <footer class="journal-footer" id="contact"><div class="shell footer-grid">

@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+  (() => {
+    const hash = location.hash.slice(1);
+    const target = (!hash || hash === 'main' || hash === 'top') ? 'research' : hash;
+    location.replace('./' + location.search + '#' + target);
+  })();
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research | Ehsan Chatraei</title>
   <meta name="description" content="Potato nitrogen and yield, hyperspectral spectroscopy, and digital soil mapping research by Ehsan Chatraei.">
   <meta name="theme-color" content="#102b22">
-  <link rel="canonical" href="https://ehsanchatraei.github.io/research.html">
+  <link rel="canonical" href="https://ehsanchatraei.github.io/#research">
   <meta property="og:title" content="Research | Ehsan Chatraei">
   <meta property="og:description" content="Potato nitrogen and yield, hyperspectral spectroscopy, and digital soil mapping research by Ehsan Chatraei.">
   <meta property="og:url" content="https://ehsanchatraei.github.io/research.html">

@@ -21,8 +21,11 @@
     .single-page #home { scroll-margin-top: 0; }
     #crop-disease { background: #deebde; border-top-color: #477d65; }
     .soil-evidence { margin-block: 1.35rem; }
-    .soil-field-views img { aspect-ratio: 5 / 4; height: auto; object-fit: cover; }
-    .soil-field-views figcaption { margin-top: .4rem; }
+    .soil-field-views { margin-top: 1.15rem; }
+    .soil-field-panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; }
+    .soil-field-panels img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; }
+    .soil-field-views figcaption { margin-top: .55rem; }
+    @media (max-width: 560px) { .soil-field-panels { grid-template-columns: minmax(0, 1fr); } }
     #home .cover { background: var(--forest); }
     #home .cover-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); align-items: center; min-height: 0; gap: clamp(2rem, 5.5vw, 5.5rem); padding-block: clamp(2.5rem, 4vw, 4rem); }
     #home .cover-copy { min-width: 0; font-family: var(--sans); }
@@ -241,10 +244,13 @@
     <figcaption>The two fused models used four selected Sentinel-2 bands. The values come from Table 4 of <a href="https://doi.org/10.1016/j.catena.2025.108902">Biney et al. (2025)</a>.</figcaption>
   </figure>
   <div class="project-note"><h3>Hyperspectral soil mapping in Manitoba</h3><p>As co-PI on a Mitacs Accelerate project with Planet Labs, I helped develop a study that pairs Tanager satellite imagery with field and laboratory spectra to evaluate how well satellite imaging can characterize agricultural soils.</p></div>
-  <div class="figure-pair soil-field-views" role="group" aria-label="Field imagery for context">
-    <figure class="paper-display"><img src="irrigated-field-overhead.jpg" alt="Overhead view of an irrigated field shown side by side in blue-green and natural tones" width="945" height="781" loading="lazy" draggable="false"><figcaption>Two overhead views of a centre-pivot field, shown as context for agricultural remote sensing.</figcaption></figure>
-    <figure class="paper-display"><img src="agricultural-landscape-aerial.jpg" alt="Oblique aerial photograph of green and yellow farm fields stretching to the horizon" width="994" height="781" loading="lazy" draggable="false"><figcaption>An oblique aerial view showing irrigation tracks and the surrounding crop mosaic.</figcaption></figure>
-  </div>
+  <figure class="paper-display soil-field-views">
+    <div class="soil-field-panels">
+      <img src="irrigated-field-overhead.jpg" alt="Overhead view of an irrigated field shown side by side in blue-green and natural tones" width="945" height="781" loading="lazy" draggable="false">
+      <img src="agricultural-landscape-aerial.jpg" alt="Oblique aerial photograph of green and yellow farm fields stretching to the horizon" width="994" height="781" loading="lazy" draggable="false">
+    </div>
+    <figcaption>Drone views over irrigated potato fields in Carberry, Manitoba.</figcaption>
+  </figure>
 </article>
 <article class="research-feature" id="root-zone" aria-labelledby="root-zone-title">
   <div class="feature-heading">

@@ -113,9 +113,16 @@
       font-size: .7rem;
       font-variant-numeric: tabular-nums;
     }
-    .carberry-evidence { margin-top: 1rem; border-bottom: 1px solid #b9c9bd; padding: .65rem 0; }
-    .carberry-evidence summary { cursor: pointer; color: #174d3d; font-weight: 700; }
-    .carberry-evidence .figure-pair { margin: .85rem 0 .35rem; }
+    .carberry-map-study, .carberry-evidence { margin-top: clamp(1.6rem, 4vw, 2.8rem); }
+    .carberry-map-study > p { max-width: 75ch; margin-top: .65rem; }
+    .carberry-map-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.75rem, 2.25vw, 1.5rem); margin-top: 1rem; }
+    .carberry-map-grid figure { padding: clamp(.45rem, 1.25vw, .9rem); border: 1px solid #c4d2c4; background: #fff; }
+    .carberry-map-grid figcaption { margin: 0 0 .45rem; color: #174d3d; font-size: .95rem; font-weight: 700; }
+    .carberry-map-grid a, .carberry-map-grid img { display: block; }
+    .carberry-map-grid img { width: 100%; height: auto; }
+    .carberry-map-note { font-size: .88rem; }
+    .carberry-evidence .figure-pair { margin: .85rem 0 0; }
+    @media (max-width: 760px) { .carberry-map-grid { grid-template-columns: minmax(0, 1fr); } }
     .carberry-body .carberry-aerial { margin-top: clamp(1.35rem, 3vw, 2.1rem); }
     .carberry-aerial > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
     .carberry-aerial img { aspect-ratio: 5 / 4; }
@@ -362,8 +369,24 @@
       </figure>
     </section>
 
-    <details class="carberry-evidence">
-      <summary>View the published trial layout and model validation</summary>
+    <section class="carberry-map-study" aria-labelledby="carberry-map-title">
+      <h3 id="carberry-map-title">Relative canopy nitrogen response</h3>
+      <p>Drone multispectral imagery shows how canopy response varied across the potato trial plots in 2023 and 2024. The maps show unitless scores, and each season has its own colour scale.</p>
+      <div class="carberry-map-grid">
+        <figure>
+          <figcaption>2023 growing season</figcaption>
+          <a href="carberry-nitrogen-response-2023.png" aria-label="View the 2023 nitrogen-response map at full size"><img src="carberry-nitrogen-response-2023.png" alt="2023 trial plots coloured by relative canopy nitrogen response, with a north arrow, 15-metre scale bar, and response-score legend" width="1377" height="770" loading="lazy" decoding="async"></a>
+        </figure>
+        <figure>
+          <figcaption>2024 growing season</figcaption>
+          <a href="carberry-nitrogen-response-2024.png" aria-label="View the 2024 nitrogen-response map at full size"><img src="carberry-nitrogen-response-2024.png" alt="2024 trial plots coloured by relative canopy nitrogen response, with a north arrow, 15-metre scale bar, and response-score legend" width="1442" height="770" loading="lazy" decoding="async"></a>
+        </figure>
+      </div>
+      <p class="carberry-map-note">The composite averages canopy-masked vegetation indices after centring each index on its median and scaling it by its interquartile range.</p>
+    </section>
+
+    <section class="carberry-evidence" aria-labelledby="carberry-evidence-title">
+      <h3 id="carberry-evidence-title">Published trial layout and model validation</h3>
       <div class="figure-pair">
         <figure class="paper-display">
           <a href="fig-drone-plots.jpg"><img src="fig-drone-plots.jpg" alt="Location and layout of the Carberry potato field experiment" width="631" height="247" loading="lazy"></a>
@@ -374,7 +397,7 @@
           <figcaption>Validation of joint models, Fig. 4 · <a href="https://doi.org/10.1016/j.compag.2026.111893">Original paper</a> · CC BY 4.0</figcaption>
         </figure>
       </div>
-    </details>
+    </section>
 
     <figure class="carberry-aerial">
       <div>

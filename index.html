@@ -21,6 +21,11 @@
     .single-page #home { scroll-margin-top: 0; }
     #crop-disease { background: #deebde; border-top-color: #477d65; }
     .soil-evidence { margin-block: 1.35rem; }
+    .drone-setup { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: center; gap: clamp(.875rem, 2.5vw, 2rem); margin: 1.15rem 0 0; padding: .75rem; border: 1px solid #becfc1; background: #f1f5ec; }
+    .drone-setup img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 82%; }
+    .drone-setup figcaption { display: grid; gap: .35rem; margin: 0; padding: .35rem .5rem; }
+    .drone-setup figcaption strong { font: 400 clamp(1.25rem, 2.25vw, 1.75rem)/1.15 var(--serif); }
+    @media (max-width: 560px) { .drone-setup { grid-template-columns: minmax(0, 1fr); } }
     .soil-field-views { margin-top: 1.15rem; }
     .soil-field-panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; }
     .soil-field-panels img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; }
@@ -214,6 +219,10 @@
     </figure></div><div class="figure-pair"><figure class="paper-display"><a href="fig-drone-plots.jpg"><img src="fig-drone-plots.jpg" alt="Location and layout of the Carberry potato field experiment" width="631" height="247" loading="lazy"></a>
     <figcaption>Field site and plot layout, Fig. 2 · <a href="https://doi.org/10.3390/rs17111860">Original paper</a> · CC BY 4.0</figcaption></figure><figure class="paper-display"><a href="fig-fusion-validation.jpg"><img src="fig-fusion-validation.jpg" alt="Scatter plots comparing observed and predicted tuber yield and petiole nitrate" width="757" height="372" loading="lazy"></a>
     <figcaption>Validation of joint models, Fig. 4 · <a href="https://doi.org/10.1016/j.compag.2026.111893">Original paper</a> · CC BY 4.0</figcaption></figure></div>
+  <figure class="drone-setup">
+    <img src="carberry-lidar-field-setup.jpg" alt="Drone on an orange landing pad beside potato rows, with a survey tripod in the background" width="1350" height="1800" loading="lazy" decoding="async" draggable="false">
+    <figcaption><strong>LiDAR field setup</strong><span>Drone and survey tripod beside the irrigated potato trials in Carberry, Manitoba.</span></figcaption>
+  </figure>
   <figure class="paper-display soil-field-views">
     <div class="soil-field-panels">
       <img src="irrigated-field-overhead.jpg" alt="Overhead view of an irrigated field shown side by side in blue-green and natural tones" width="945" height="781" loading="lazy" draggable="false">

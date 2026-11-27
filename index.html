@@ -21,8 +21,14 @@
     .single-page #home { scroll-margin-top: 0; }
     #crop-disease { background: #deebde; border-top-color: #477d65; }
     .soil-evidence { margin-block: 1.35rem; }
-    #fieldwork .fieldwork-flight { margin: 0 0 clamp(1rem, 2.5vw, 1.6rem); }
-    #fieldwork .fieldwork-flight img { display: block; width: 100%; height: auto; }
+    .field-page .outreach-demonstrations { background: #f3f5ec; border-top: 3px solid #688b71; }
+    .outreach-demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.8rem, 2vw, 1.5rem); }
+    .outreach-demo-grid figure { margin: 0; border: 1px solid #bccdbf; background: #faf9f2; }
+    .outreach-demo-grid img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+    .outreach-demo-grid figcaption { display: grid; gap: .3rem; margin: 0; padding: clamp(.75rem, 2vw, 1.15rem); font-size: .95rem; }
+    .outreach-demo-grid figcaption strong { color: #174437; font: 400 clamp(1.3rem, 2.1vw, 1.65rem)/1.15 var(--serif); }
+    #fieldwork .field-gallery-v6 img { aspect-ratio: 16 / 9; }
+    @media (max-width: 620px) { .outreach-demo-grid, #fieldwork .field-gallery-v6 { grid-template-columns: minmax(0, 1fr); } }
     #crop.carberry-study { padding: 0; background: #f3f5ec; border-color: #678779; }
     .carberry-intro {
       display: grid;
@@ -548,24 +554,42 @@
     </ul><p class="pub-empty" hidden>No papers match. Try a different search or year.</p></div>
 </section>
 <section id="field-outreach" aria-label="Field and outreach">
-<div class="inner-heading"><div class="shell">
-      <h1>Fieldwork &amp; outreach</h1><p>Putting instruments, methods and results in front of the people who work with them.</p>
-    </div></div><div class="shell field-page"><figure class="outreach-lead">
-      <img src="field-outreach-full.jpg" alt="Ehsan presenting at an outdoor field demonstration beside a potato trial" width="1500" height="1125" loading="lazy">
-      <figcaption>Speaking with potato producers and other field-day participants in Manitoba about how digital agronomy research combines drone imagery and field measurements to assess crop nitrogen status and guide in-season fertilizer decisions.</figcaption>
-    </figure><section id="fieldwork" class="rule-section" aria-labelledby="fieldwork-title">
-  <div class="section-label"><h2 id="fieldwork-title">Fieldwork</h2><p>Carberry, Manitoba</p></div>
-  <figure class="fieldwork-flight">
-    <img src="carberry-drone-flight.jpg" alt="Research drone in flight beside a University of Manitoba field vehicle and a GNSS base station" width="1680" height="945" loading="lazy" decoding="async">
-    <figcaption>Drone survey during the potato field trials in Carberry, Manitoba.</figcaption>
-  </figure>
-  <div class="section-body field-strip field-gallery-v6">
-    <figure><img src="trial-2024.jpg" alt="Aerial view showing the layout of crop research plots" width="960" height="640" loading="lazy"><figcaption>Carberry research plots, 2024</figcaption></figure>
-    <figure><img src="trial-2025.jpg" alt="Rows of potato research plots viewed from a drone during fieldwork" width="960" height="640" loading="lazy"><figcaption>Carberry field campaign, 2025</figcaption></figure>
-    <figure><img src="carberry.jpg" alt="People and equipment at the edge of a potato field trial" width="931" height="495" loading="lazy"><figcaption>Field team and equipment</figcaption></figure>
-    <figure><img src="outreach.jpg" alt="Attendees gathered around a field demonstration of sensing equipment" width="623" height="469" loading="lazy"><figcaption>Field demonstrations and outreach</figcaption></figure>
+  <div class="inner-heading">
+    <div class="shell">
+      <h1>Fieldwork &amp; outreach</h1>
+      <p>Digital agronomy in the field, from crop trials to grower demonstrations and hands-on teaching.</p>
+    </div>
   </div>
-</section><section id="teaching" class="rule-section" aria-labelledby="teaching-title">
+  <div class="shell field-page">
+    <div class="rule-section outreach-demonstrations" role="region" aria-labelledby="outreach-demonstrations-title">
+      <div class="section-label"><h2 id="outreach-demonstrations-title">Field demonstrations</h2></div>
+      <div class="outreach-demo-grid">
+        <figure>
+          <img src="field-outreach-full.jpg" alt="Ehsan speaking to potato producers beside a research plot" width="1500" height="1125" loading="lazy" decoding="async">
+          <figcaption>
+            <strong>Potato field day</strong>
+            <span>Sharing drone-based approaches to nitrogen management with potato producers.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="outreach.jpg" alt="Ehsan demonstrating drone technology to a group beside a canola field" width="623" height="469" loading="lazy" decoding="async">
+          <figcaption>
+            <strong>Canola Days</strong>
+            <span>Discussing smart farming and drone-based crop monitoring.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <section id="fieldwork" class="rule-section" aria-labelledby="fieldwork-title">
+      <div class="section-label"><h2 id="fieldwork-title">Fieldwork</h2><p>Carberry, Manitoba</p></div>
+      <div class="section-body field-strip field-gallery-v6">
+        <figure><img src="carberry-drone-flight.jpg" alt="Research drone in flight beside a University of Manitoba field vehicle and a GNSS base station" width="1680" height="945" loading="lazy" decoding="async"><figcaption>Drone survey during the potato field trials in Carberry, Manitoba.</figcaption></figure>
+        <figure><img src="carberry.jpg" alt="People and equipment at the edge of a potato field trial" width="931" height="495" loading="lazy"><figcaption>Field team and equipment</figcaption></figure>
+        <figure><img src="trial-2024.jpg" alt="Aerial view showing the layout of crop research plots" width="960" height="640" loading="lazy"><figcaption>Carberry research plots, 2024</figcaption></figure>
+        <figure><img src="trial-2025.jpg" alt="Rows of potato research plots viewed from a drone during fieldwork" width="960" height="640" loading="lazy"><figcaption>Carberry field campaign, 2025</figcaption></figure>
+      </div>
+    </section>
+    <section id="teaching" class="rule-section" aria-labelledby="teaching-title">
   <div class="section-label"><h2 id="teaching-title">Teaching</h2><p>University of Manitoba</p></div>
   <div class="section-body teaching-content">
     <div class="teaching-guest-grid">
